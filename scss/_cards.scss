@@ -1,0 +1,11 @@
+.theme {
+    &.active {
+        border-radius: var(--admin-radius);
+    }
+
+    &.add-new-theme {
+        a:after {
+            background-color: var(--admin-aside-bg-clr);
+        }
+    }
+}

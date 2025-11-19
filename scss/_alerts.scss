@@ -1,0 +1,28 @@
+.notice {
+    border-radius: var(--admin-radius);
+    border-left-width: 1px;
+
+
+    &.is-dismissible {}
+
+    &.updated {}
+
+
+
+
+    &.notice-warning {
+        border-color: #dba617;
+    }
+
+    &.notice-success {
+        border-color: #46b450;
+    }
+
+    &.notice-info {
+        border-color: #00a0d2;
+    }
+
+    &.notice-error {
+        border-color: #dc3232;
+    }
+}

@@ -1,0 +1,22 @@
+
+
+#wpcontent, #wpfooter {
+    margin-left: var(--admin-aside-width);
+}
+
+/* admin cards */
+.postbox {
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+}
+
+.postbox .postbox-header {
+    border-bottom-color: var(--admin-border-color-light-1);
+}
+
+/* post title */
+#titlewrap input {
+    border-radius: var(--admin-radius);
+    border-width: 2px;
+    box-shadow: none;
+}

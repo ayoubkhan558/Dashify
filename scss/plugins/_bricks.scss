@@ -1,0 +1,13 @@
+
+.bricks-button-filter {
+    &.button-secondary {
+        background-color: var(--admin-primary-light-2);
+        border-radius: var(--admin-radius-md);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--admin-primary-light-1);
+        }
+    }
+}

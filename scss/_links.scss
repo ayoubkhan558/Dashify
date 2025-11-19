@@ -1,0 +1,11 @@
+.wrap .page-title-action {
+    color: var(--admin-primary) !important;
+    border-color: var(--admin-primary) !important;
+    border-radius: var(--admin-radius-md) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--admin-bg-main-light-1);
+    }
+}

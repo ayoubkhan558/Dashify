@@ -1,0 +1,61 @@
+ .acf-tab-wrap.-top {
+     overflow: hidden;
+ }
+
+ .acf-tab-group {
+     padding: var(--admin-padding);
+
+ }
+
+ .acf-tab-button {
+     border-radius: var(--admin-radius);
+     border-bottom: 1px solid var(--acf-border-color) !important;
+ }
+
+ .acf-postbox .acf-hndle-cog {
+     height: 30px;
+     line-height: 1.85;
+ }
+
+ // acf buttons 
+ .acf-btn {
+     background-color: var(--admin-bg-color-1);
+     border-radius: var(--admin-radius-md);
+
+     &.acf-btn-secondary {
+         background-color: var(--admin-primary-light-2);
+
+         &:hover,
+         &:focus,
+         &:active {
+             background-color: var(--admin-primary-light-1);
+         }
+     }
+
+     &.acf-publish {
+         background-color: var(--admin-primary);
+
+         &:hover,
+         &:focus,
+         &:active {
+             background-color: var(--admin-primary-light-1);
+         }
+     }
+
+
+     &.acf-btn-sm {
+         border-radius: var(--admin-radius-sm);
+     }
+ }
+
+
+ // acf editor styles
+ .acf-editor-wrap .wp-editor-container {
+     border-radius: var(--admin-radius-md);
+     overflow: hidden;
+ }
+
+
+ .acf-gallery {
+     border-radius: var(--admin-radius-md);
+ }

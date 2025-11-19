@@ -1,0 +1,67 @@
+:root {
+    --top-offset: 5px;
+    --top-bg: #1A1A1A;
+
+    /* Primary color + generated shades */
+    --admin-primary: hsl(85, 48%, 53%);
+    --admin-primary-light-1: hsl(from var(--admin-primary) h s calc(l + 12));
+    --admin-primary-light-2: hsl(from var(--admin-primary) h s calc(l + 24));
+    --admin-primary-dark-1: hsl(from var(--admin-primary) h s calc(l - 12));
+    --admin-primary-dark-2: hsl(from var(--admin-primary) h s calc(l - 24));
+
+    --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
+
+    /* Text colors */
+    --admin-dark-clr: hsl(0, 2%, 9%);
+    --admin-dark-clr-tint-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+    --admin-dark-clr-tint-2: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+    --admin-dark-clr-shade-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+    --admin-dark-clr-shade-2: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+
+    /* Background colors */
+    --admin-bg-main: hsl(0, 0%, 95%);
+    --admin-bg-main-light-1: hsl(from var(--admin-bg-main) h s calc(l + 12));
+    --admin-bg-main-light-2: hsl(from var(--admin-bg-main) h s calc(l + 12));
+    --admin-bg-main-dark-1: hsl(from var(--admin-bg-main) h s calc(l + 12));
+    --admin-bg-main-dark-2: hsl(from var(--admin-bg-main) h s calc(l + 12));
+
+    /* Border colors */
+    --admin-border-color: #ebebeb;
+    --admin-border-color-light-1: #ebebeb;
+    --admin-border-color-light-2: #ebebeb;
+    --admin-border-color-dark-1: #303030;
+    --admin-border-color-dark-2: #303030;
+
+    /* Aside */
+    --admin-aside-width: 225px;
+    --admin-aside-bg-clr: #EBEBEB;
+    --admin-aside-bg-clr-light-1: #FAFAFA;
+    --admin-aside-bg-clr-light-2: #FAFAFA;
+    --admin-aside-bg-clr-dark-1: #FAFAFA;
+    --admin-aside-bg-clr-dark-2: #FAFAFA;
+
+    /* UI styling */
+    --admin-radius-sm: 4px;
+    --admin-radius-md: 8px;
+    --admin-radius: 12px;
+    --admin-radius-lg: 16px;
+    --admin-radius-xl: 20px;
+
+    /* Padding scale */
+    --admin-padding-xs: 4px;
+    --admin-padding-sm: 8px;
+    --admin-padding: 12px;
+    --admin-padding-lg: 20px;
+    --admin-padding-xl: 28px;
+
+    /* Shadows */
+    --admin-box-shadow: 0rem .3125rem .3125rem -.15625rem rgba(0, 0, 0, .03),
+        0rem .1875rem .1875rem -.09375rem rgba(0, 0, 0, .02),
+        0rem .125rem .125rem -.0625rem rgba(0, 0, 0, .02),
+        0rem .0625rem .0625rem -.03125rem rgba(0, 0, 0, .03),
+        0rem .03125rem .03125rem 0rem rgba(0, 0, 0, .04),
+        0rem 0rem 0rem .0625rem rgba(0, 0, 0, .06);
+
+    /* ACF */
+    --acf-border-color: #ccd0d4;
+}

@@ -1,0 +1,78 @@
+.wp-core-ui {
+    .button {
+        overflow: hidden;
+        font-weight: 600;
+        background-color: var(--admin-bg-color-1);
+        border-radius: var(--admin-radius-md) !important;
+
+        &.button-primary {
+            background-color: var(--admin-dark-clr-shade-1);
+            background: var(--admin-dark-clr-shade-1);
+            border-color: var(--admin-dark-clr-tint-1);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: var(--admin-dark-clr);
+                border-color: var(--admin-dark-clr);
+            }
+        }
+
+        &.button-primary[disabled],
+        &.button-primary-disabled {
+            background-color: var(--admin-primary-light-1);
+        }
+
+        &.button-secondary {
+            background-color: var(--admin-primary-light-2);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: var(--admin-primary-light-1);
+            }
+        }
+
+        &.button-link,
+        &.button-link-delete {
+            background-color: transparent;
+            border-radius: var(--admin-radius-md);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: var(--admin-bg-color-1);
+            }
+        }
+
+        // sizes
+        &.button-large {
+            border-radius: var(--admin-radius-md);
+        }
+
+        &.button-small {
+            border-radius: var(--admin-radius-sm);
+        }
+
+        &.preview {}
+
+        &.tagadd {}
+    }
+
+}
+
+
+.nav-tab {
+    background-color: var(--admin-bg-color-1);
+    border-radius: var(--admin-radius-sm);
+
+    &.nav-tab-active {
+        background-color: var(--admin-primary-light-1);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--admin-primary-light-1);
+    }
+}

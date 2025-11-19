@@ -1,0 +1,126 @@
+form {
+    input {}
+}
+
+
+.wp-filter-search {
+    border-radius: var(--admin-radius-md);
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-padding);
+
+    // Labels 
+    label {
+        font-weight: 600;
+        color: var(--admin-dark-clr-shade-1);
+        margin-bottom: calc(var(--admin-padding-xs) / 2);
+    }
+
+    // Inputs / Select / Textarea 
+    input,
+    textarea,
+    select {
+        padding: var(--admin-padding-sm) var(--admin-padding);
+        font-size: 1rem;
+        color: var(--admin-dark-clr-shade-2);
+        background: var(--admin-bg-main-light-2);
+        border: 1px solid var(--admin-border-color-light-1);
+        border-radius: var(--admin-radius-md) !important;
+        transition: border-color .2s, box-shadow .2s, background .2s;
+
+        &:focus {
+            border-color: var(--admin-primary);
+            outline: none;
+            background: var(--admin-bg-main-light-1);
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--admin-primary) 25%, transparent);
+        }
+
+        &:disabled {
+            background: var(--admin-bg-main-dark-1);
+            opacity: .7;
+            cursor: not-allowed;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    select {
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' > <path fill='%23666666' d='M5.5 7l4.5 4.5L14.5 7' /> </svg>");
+        background-repeat: no-repeat;
+        background-position: right var(--admin-padding) center;
+        background-size: 14px;
+    }
+
+    // Checkbox / Radio Wrappers 
+    .form-check {
+        display: flex;
+        align-items: center;
+        gap: var(--admin-padding-sm);
+
+        label {
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+
+    // Checkbox / Radio Base
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--admin-primary);
+        cursor: pointer;
+    }
+
+    // Error State 
+    .error {
+
+        input,
+        textarea,
+        select {
+            border-color: var(--admin-primary-dark-2);
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--admin-primary-dark-2) 25%, transparent);
+        }
+
+        .error-message {
+            color: var(--admin-primary-dark-2);
+            font-size: 0.875rem;
+            margin-top: var(--admin-padding-xs);
+        }
+    }
+
+    // Submit Button 
+    button[type="submit"],
+    .btn-submit {
+        padding: var(--admin-padding-sm) var(--admin-padding-lg);
+        background: var(--admin-primary);
+        color: var(--admin-bg-main-light-2);
+        border: none;
+        border-radius: var(--admin-radius-md);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            background: var(--admin-primary-dark-1);
+        }
+
+        &:active {
+            background: var(--admin-primary-dark-2);
+        }
+
+        &:disabled {
+            background: var(--admin-primary-light-1);
+            cursor: not-allowed;
+        }
+    }
+}

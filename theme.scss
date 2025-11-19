@@ -1,0 +1,32 @@
+/* variables  */
+@import "./scss/variables";
+@import "./scss//mixins";
+
+/* core styles */
+@import "./scss/base";
+/* LAYOUT styles */
+@import "./scss/layout";
+/* Main/Content styles */
+@import "./scss/main";
+/* Sidebar styles */
+@import "./scss/aside";
+/* navigation styles */
+@import "./scss/navigation";
+/* Cards styles */
+@import "./scss/cards";
+/* Nav/Tabs styles */
+@import "./scss/nav-tabs";
+/* TABLES styles */
+@import "./scss/tables";
+/* alerts styles */
+@import "./scss/alerts";
+/* buttons styles */
+@import "./scss/buttons";
+/* links styles */
+@import "./scss/links";
+/* FORMS styles */
+@import "./scss/forms";
+
+/* PLUGINS styles */
+@import "./scss/plugins/happy-files";
+@import "./scss/plugins/acf";
