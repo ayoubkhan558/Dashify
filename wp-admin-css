@@ -1,0 +1,48 @@
+:root {
+    --admin-border-radius: 12px;
+    --admin-box-shadow: 0px 0px 4px 0px #0000004d;
+    --admin-box-shadow: 0rem .3125rem .3125rem -.15625rem rgba(0, 0, 0, .03), 0rem .1875rem .1875rem -.09375rem rgba(0, 0, 0, .02), 0rem .125rem .125rem -.0625rem rgba(0, 0, 0, .02), 0rem .0625rem .0625rem -.03125rem rgba(0, 0, 0, .03), 0rem .03125rem .03125rem 0rem rgba(0, 0, 0, .04), 0rem 0rem 0rem .0625rem rgba(0, 0, 0, .06);
+    --admin-padding: 20px;
+    --admin-bg-main: #F1F1F1;
+    --admin-bg-color-1: #ebebeb;
+    --admin-border-color-dark: #303030;
+    --admin-border-color-light: #ebebeb;
+    --acf-border-color: #ccd0d4;
+}
+
+body.wp-admin {
+    background-color: var(--admin-bg-main);
+}
+
+.postbox {
+    border-radius: var(--admin-border-radius);
+    overflow: hidden;
+}
+
+.postbox-header {
+    border-bottom-color: var(--admin-border-color-light);
+}
+
+#titlewrap input {
+    border-radius: var(--admin-border-radius);
+    box-shadow: var(--admin-box-shadow);
+}
+
+/* ACF */
+.acf-tab-wrap.-top {
+    overflow: hidden;
+}
+
+.acf-tab-group {
+    padding: var(--admin-padding);
+    
+}
+
+.acf-tab-button {
+    border-radius: var(--admin-border-radius);
+    border-bottom: 1px solid var(--acf-border-color) !important;
+}
+
+.acf-postbox .acf-hndle-cog {
+    height: 30px;
+}
