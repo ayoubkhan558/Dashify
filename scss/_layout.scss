@@ -1,3 +1,6 @@
 #wpwrap {
     margin-top: calc(var(--top-offset) * 2);
+
+    // temporary fix for overflow 
+    overflow: hidden;
 }

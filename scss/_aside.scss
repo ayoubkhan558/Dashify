@@ -8,6 +8,33 @@
     background-color: var(--admin-aside-bg-clr);
 }
 
+// folded 
+.folded {
+    #adminmenuwrap {
+        width: var(--admin-aside-width-folded);
+    }
+
+    #adminmenu {
+        width: auto;
+        padding: var(--admin-padding-sm);
+    }
+
+    #wpcontent,
+    #wpfooter {
+        margin-left: var(--admin-aside-width-folded);
+    }
+
+    #adminmenu li.menu-top {
+        width: auto;
+    }
+}
+
+
+
+.wp-submenu-head {
+    color: var(--admin-dark-clr) !important;
+}
+
 /* admin sidebar  */
 #adminmenu {
     width: auto;
@@ -75,7 +102,7 @@
                 background-color: var(--admin-aside-bg-clr-light-2);
 
                 .wp-menu-image:before {
-                    color: var(--admin-dark-clr);
+                    // color: var(--admin-dark-clr);
                 }
             }
         }

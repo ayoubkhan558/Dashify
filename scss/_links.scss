@@ -1,4 +1,16 @@
+a {
+    color: var(--admin-primary-dark-1);
+    font-weight: 500;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--admin-primary-dark-2);
+    }
+}
+
 .wrap .page-title-action {
+    font-weight: 600;
     color: var(--admin-primary) !important;
     border-color: var(--admin-primary) !important;
     border-radius: var(--admin-radius-md) !important;

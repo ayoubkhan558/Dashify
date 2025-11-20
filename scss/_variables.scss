@@ -11,6 +11,12 @@
 
     --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
 
+
+    --admin-warning: hsl(45, 100%, 51%);
+    --admin-success: hsl(135, 100%, 41%);   
+    --admin-danger: hsl(0, 78%, 62%);
+    --admin-info: hsl(205, 100%, 36%);
+
     /* Text colors */
     --admin-dark-clr: hsl(0, 2%, 9%);
     --admin-dark-clr-tint-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
@@ -34,6 +40,7 @@
 
     /* Aside */
     --admin-aside-width: 225px;
+    --admin-aside-width-folded: 57px;
     --admin-aside-bg-clr: #EBEBEB;
     --admin-aside-bg-clr-light-1: #FAFAFA;
     --admin-aside-bg-clr-light-2: #FAFAFA;

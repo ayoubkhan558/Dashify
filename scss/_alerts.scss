@@ -7,9 +7,15 @@
 
     &.updated {}
 
+    &.update-message {}
 
 
+    &.inline {}
 
+    &.notice-alt {}
+
+
+    // varaints
     &.notice-warning {
         border-color: #dba617;
     }
@@ -24,5 +30,12 @@
 
     &.notice-error {
         border-color: #dc3232;
+    }
+
+    // plugins page warning 
+    &.update-message.notice-warning {
+        background-color: white;
+        border: 0;
+        font-size: 12px !important;
     }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* variables  */
 :root {
   --top-offset: 5px;
@@ -9,6 +10,10 @@
   --admin-primary-dark-1: hsl(from var(--admin-primary) h s calc(l - 12));
   --admin-primary-dark-2: hsl(from var(--admin-primary) h s calc(l - 24));
   --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
+  --admin-warning: hsl(45, 100%, 51%);
+  --admin-success: hsl(135, 100%, 41%);
+  --admin-danger: hsl(0, 78%, 62%);
+  --admin-info: hsl(205, 100%, 36%);
   /* Text colors */
   --admin-dark-clr: hsl(0, 2%, 9%);
   --admin-dark-clr-tint-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
@@ -29,6 +34,7 @@
   --admin-border-color-dark-2: #303030;
   /* Aside */
   --admin-aside-width: 225px;
+  --admin-aside-width-folded: 57px;
   --admin-aside-bg-clr: #EBEBEB;
   --admin-aside-bg-clr-light-1: #FAFAFA;
   --admin-aside-bg-clr-light-2: #FAFAFA;
@@ -66,6 +72,7 @@ body.wp-admin {
 /* LAYOUT styles */
 #wpwrap {
   margin-top: calc(var(--top-offset) * 2);
+  overflow: hidden;
 }
 
 /* Main/Content styles */
@@ -100,6 +107,25 @@ body.wp-admin {
 #adminmenuwrap {
   width: var(--admin-aside-width);
   background-color: var(--admin-aside-bg-clr);
+}
+
+.folded #adminmenuwrap {
+  width: var(--admin-aside-width-folded);
+}
+.folded #adminmenu {
+  width: auto;
+  padding: var(--admin-padding-sm);
+}
+.folded #wpcontent,
+.folded #wpfooter {
+  margin-left: var(--admin-aside-width-folded);
+}
+.folded #adminmenu li.menu-top {
+  width: auto;
+}
+
+.wp-submenu-head {
+  color: var(--admin-dark-clr) !important;
 }
 
 /* admin sidebar  */
@@ -146,9 +172,6 @@ body.wp-admin {
   color: var(--admin-dark-clr);
   background-color: var(--admin-aside-bg-clr-light-2);
 }
-#adminmenu li.menu-top.opensub a.menu-top .wp-menu-image:before {
-  color: var(--admin-dark-clr);
-}
 #adminmenu li.menu-top.wp-has-current-submenu a.wp-has-current-submenu {
   color: var(--admin-dark-clr);
 }
@@ -194,6 +217,80 @@ body.wp-admin {
   background-color: var(--admin-aside-bg-clr);
 }
 
+#screen-meta {
+  border-radius: 0 0 var(--admin-radius) var(--admin-radius);
+  overflow: hidden;
+}
+
+.theme-browser .themes {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+.theme-browser .themes .theme {
+  overflow: hidden;
+  border-radius: var(--admin-radius);
+  margin: 0;
+  width: 100%;
+  border-width: 2px;
+}
+.theme-browser .themes .theme.active {
+  border-color: var(--admin-primary);
+}
+
+.plugin-card,
+.plugin-install-php .wp-filter {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+}
+
+.plugin-card {
+  border-width: 2px;
+}
+.plugin-card:has(.compatibility-untested) {
+  border-color: var(--admin-warning);
+}
+.plugin-card .desc.column-description p:first-child {
+  display: none;
+}
+.plugin-card .plugin-icon {
+  width: 75px;
+  height: 75px;
+}
+.plugin-card .plugin-card-top {
+  min-height: 85px;
+}
+.plugin-card .desc > p,
+.plugin-card .name {
+  margin-left: 95px;
+}
+.plugin-card .plugin-card-bottom {
+  background-color: var(--admin-bg-main-light-1);
+}
+.wp-filter + p {
+  /* display: none; */
+  opacity: 0;
+  margin: 0px;
+}
+
+.column-compatibility:has(.compatibility-untested)::after {
+  content: "❌ Untested";
+}
+
+.column-compatibility .compatibility-untested {
+  display: none;
+}
+
+.column-compatibility:has(.compatibility-compatible)::after {
+  content: "✓ Compatible";
+  color: green;
+}
+
+.column-compatibility .compatibility-compatible {
+  display: none;
+}
+
 /* Nav/Tabs styles */
 .nav-tab {
   border-radius: var(--admin-radius);
@@ -202,6 +299,10 @@ body.wp-admin {
 table {
   border-radius: var(--admin-radius-md) !important;
   overflow: hidden;
+}
+table thead th {
+  font-size: 16px !important;
+  font-weight: 600;
 }
 
 /* alerts styles */
@@ -221,12 +322,17 @@ table {
 .notice.notice-error {
   border-color: #dc3232;
 }
+.notice.update-message.notice-warning {
+  background-color: white;
+  border: 0;
+  font-size: 12px !important;
+}
 
 /* buttons styles */
 .wp-core-ui .button {
   overflow: hidden;
   font-weight: 600;
-  background-color: var(--admin-bg-color-1);
+  background-color: var(--admin-bg-main);
   border-radius: var(--admin-radius-md) !important;
 }
 .wp-core-ui .button.button-primary {
@@ -252,7 +358,7 @@ table {
   border-radius: var(--admin-radius-md);
 }
 .wp-core-ui .button.button-link:hover, .wp-core-ui .button.button-link:focus, .wp-core-ui .button.button-link:active, .wp-core-ui .button.button-link-delete:hover, .wp-core-ui .button.button-link-delete:focus, .wp-core-ui .button.button-link-delete:active {
-  background-color: var(--admin-bg-color-1);
+  background-color: var(--admin-bg-main);
 }
 .wp-core-ui .button.button-large {
   border-radius: var(--admin-radius-md);
@@ -260,8 +366,15 @@ table {
 .wp-core-ui .button.button-small {
   border-radius: var(--admin-radius-sm);
 }
+.wp-core-ui .button.show-settings {
+  border-radius: 0 0 var(--admin-radius-sm) var(--admin-radius-sm);
+}
+.wp-core-ui .button.activate {
+  background-color: var(--admin-bg-main);
+}
+
 .nav-tab {
-  background-color: var(--admin-bg-color-1);
+  background-color: var(--admin-bg-main);
   border-radius: var(--admin-radius-sm);
 }
 .nav-tab.nav-tab-active {
@@ -272,7 +385,16 @@ table {
 }
 
 /* links styles */
+a {
+  color: var(--admin-primary-dark-1);
+  font-weight: 500;
+}
+a:hover, a:focus, a:active {
+  color: var(--admin-primary-dark-2);
+}
+
 .wrap .page-title-action {
+  font-weight: 600;
   color: var(--admin-primary) !important;
   border-color: var(--admin-primary) !important;
   border-radius: var(--admin-radius-md) !important;
@@ -286,16 +408,6 @@ table {
   border-radius: var(--admin-radius-md);
 }
 
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: var(--admin-padding);
-}
 form label {
   font-weight: 600;
   color: var(--admin-dark-clr-shade-1);
@@ -421,7 +533,7 @@ form .btn-submit:disabled {
 }
 
 .acf-btn {
-  background-color: var(--admin-bg-color-1);
+  background-color: var(--admin-bg-main);
   border-radius: var(--admin-radius-md);
 }
 .acf-btn.acf-btn-secondary {
@@ -448,3 +560,4 @@ form .btn-submit:disabled {
 .acf-gallery {
   border-radius: var(--admin-radius-md);
 }
+/*# sourceMappingURL=theme.css.map */
