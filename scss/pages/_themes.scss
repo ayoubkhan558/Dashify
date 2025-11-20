@@ -1,0 +1,33 @@
+
+// themes
+.theme {
+    &.active {
+        border-radius: var(--admin-radius);
+    }
+
+    &.add-new-theme {
+        a:after {
+            background-color: var(--admin-aside-bg-clr);
+        }
+    }
+}
+.theme-browser {
+    .themes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1rem;
+
+
+        .theme {
+            overflow: hidden;
+            border-radius: var(--admin-radius);
+            margin: 0;
+            width: 100%;
+            border-width: 2px;
+
+            &.active {
+                border-color: var(--admin-primary);
+            }
+        }
+    }
+}

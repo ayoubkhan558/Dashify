@@ -1,0 +1,70 @@
+#nav-menus-frame {
+    #menu-management {
+        .menu-edit {
+            border-radius: var(--admin-radius);
+            overflow: hidden;
+        }
+
+        #nav-menu-footer,
+        #nav-menu-header {
+            background-color: var(--admin-bg-main);
+        }
+    }
+
+    #side-sortables {
+        border-radius: var(--admin-radius);
+        overflow: hidden;
+    }
+
+    .control-section.accordion-section {}
+}
+
+
+// menu nav tabs    
+.nav-tab-wrapper {
+    .nav-tab {
+        &.nav-tab-active {
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.posttype-tabs {
+    li.tabs {
+        margin-bottom: 10px;
+        border-radius: var(--admin-radius);
+        border-bottom-color: var(--admin-border-color);
+
+        .nav-tab-link {
+            outline: none !important;
+        }
+    }
+}
+
+// Create your first menu below.
+.manage-menus {
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+}
+
+.menu {
+    .menu-item {
+
+        // menu item header
+        .menu-item-bar {}
+
+        // menu item footer
+        .menu-item-settings {}
+
+
+
+
+        &.menu-item-page {}
+
+        &.pending {}
+
+        &.menu-item-depth-0 {}
+
+        &.menu-item-edit-active {}
+    }
+}

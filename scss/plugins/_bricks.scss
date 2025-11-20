@@ -1,4 +1,3 @@
-
 .bricks-button-filter {
     &.button-secondary {
         background-color: var(--admin-primary-light-2);
@@ -10,4 +9,14 @@
             background-color: var(--admin-primary-light-1);
         }
     }
+}
+
+
+.bricks-admin-wrapper {
+    max-width: 100%;
+}
+
+.bricks-admin-inner {
+    border-radius: var(--admin-radius);
+    overflow: hidden;
 }

@@ -132,12 +132,24 @@
             color: var(--admin-dark-clr);
             background-color: var(--admin-aside-bg-clr-dark-1);
 
-            li.current a {
 
-                &:hover,
-                &:focus,
-                &:active {
-                    color: var(--admin-primary);
+            li {
+                &.current a {
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: var(--admin-primary) !important;
+                    }
+                }
+
+                a {
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: var(--admin-primary) !important;
+                    }
                 }
             }
         }

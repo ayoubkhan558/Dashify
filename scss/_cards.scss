@@ -1,15 +1,9 @@
-.theme {
-    &.active {
-        border-radius: var(--admin-radius);
-    }
 
-    &.add-new-theme {
-        a:after {
-            background-color: var(--admin-aside-bg-clr);
-        }
-    }
+
+// welcome screen 
+.meta-box-sortables {
+    border-radius: 12px;
 }
-
 
 // screen options 
 #screen-meta {
@@ -17,93 +11,4 @@
     overflow: hidden;
 }
 
-// themes
-.theme-browser {
-    .themes {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 1rem;
 
-
-        .theme {
-            overflow: hidden;
-            border-radius: var(--admin-radius);
-            margin: 0;
-            width: 100%;
-            border-width: 2px;
-
-            &.active {
-                border-color: var(--admin-primary);
-            }
-        }
-    }
-}
-
-
-// plugins 
-.plugin-card,
-.plugin-install-php .wp-filter {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
-}
-
-.plugin-card {
-    border-width: 2px;
-
-    &:has(.compatibility-untested) {
-        border-color: var(--admin-warning);
-    }
-
-    .desc.column-description {
-        p:first-child {
-            display: none;
-        }
-    }
-
-    .plugin-icon {
-        width: 75px;
-        height: 75px;
-    }
-
-    .plugin-card-top {
-        min-height: 85px;
-    }
-
-    .desc>p,
-    .name {
-        margin-left: 95px;
-    }
-
-    .plugin-card-bottom {
-        background-color: var(--admin-bg-main-light-1);
-    }
-
-    .star {
-        &.star-full {}
-
-        &.star-half {}
-    }
-}
-
-.wp-filter+p {
-    /* display: none; */
-    opacity: 0;
-    margin: 0px;
-}
-
-.column-compatibility:has(.compatibility-untested)::after {
-    content: "❌ Untested";
-}
-
-.column-compatibility .compatibility-untested {
-    display: none;
-}
-
-.column-compatibility:has(.compatibility-compatible)::after {
-    content: "✓ Compatible";
-    color: green;
-}
-
-.column-compatibility .compatibility-compatible {
-    display: none;
-}

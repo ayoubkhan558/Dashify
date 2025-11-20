@@ -27,6 +27,14 @@
 /* FORMS styles */
 @import "./scss/forms";
 
+
+/* Pages/Screen styles */
+@import "./scss/pages/menu";
+@import "./scss/pages/themes";
+@import "./scss/pages/plugins";
+
 /* PLUGINS styles */
+@import "./scss/plugins/bricks";
+@import "./scss/plugins/fluent-cart";
 @import "./scss/plugins/happy-files";
 @import "./scss/plugins/acf";

@@ -1,11 +1,14 @@
 .notice {
     border-radius: var(--admin-radius);
-    border-left-width: 1px;
+    border-width: 0 !important;
 
 
     &.is-dismissible {}
 
-    &.updated {}
+    &.updated {
+        color: var(--admin-success);
+        background-color: hsla(from var(--admin-success) h calc(s - 75) calc(l + 35));
+    }
 
     &.update-message {}
 
@@ -17,19 +20,23 @@
 
     // varaints
     &.notice-warning {
-        border-color: #dba617;
+        color: var(--admin-warning);
+        background-color: hsla(from var(--admin-warning) h calc(s - 75) calc(l + 35));
     }
 
     &.notice-success {
-        border-color: #46b450;
+        color: var(--admin-success);
+        background-color: hsla(from var(--admin-success) h calc(s - 75) calc(l + 35));
     }
 
     &.notice-info {
-        border-color: #00a0d2;
+        color: var(--admin-info);
+        background-color: hsla(from var(--admin-info) h calc(s - 75) calc(l + 35));
     }
 
     &.notice-error {
-        border-color: #dc3232;
+        color: var(--admin-danger);
+        background-color: hsla(from var(--admin-danger) h calc(s - 75) calc(l + 35));
     }
 
     // plugins page warning 
