@@ -137,8 +137,8 @@ body.wp-admin {
   width: auto;
 }
 
-.auto-fold #wpcontent,
-.auto-fold #wpfooter {
+.auto-fold.folded #wpcontent,
+.auto-fold.folded #wpfooter {
   margin-left: calc(var(--admin-aside-width-folded) + 0px);
 }
 
