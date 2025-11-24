@@ -24,6 +24,17 @@
             background-color: var(--admin-primary-light-1);
         }
 
+        &.activate {
+            color: var(--admin-dark-clr);
+            background-color: var(--admin-primary-light-2);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: var(--admin-primary-light-1);
+            }
+        }
+
         &.button-secondary {
             color: var(--admin-dark-clr);
             background-color: var(--admin-primary-light-2);

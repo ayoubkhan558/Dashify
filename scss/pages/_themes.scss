@@ -1,4 +1,3 @@
-
 // themes
 .theme {
     &.active {
@@ -11,6 +10,34 @@
         }
     }
 }
+
+.theme-overlay {
+    .theme-backdrop {
+        left: var(--admin-aside-width-folded);
+    }
+
+    .theme-screenshots {
+        width: 30%;
+    }
+
+    .theme-wrap {
+        left: calc(var(--admin-aside-width) + 24px);
+        overflow: hidden;
+        border-radius: var(--admin-radius);
+        bottom: fluid-value(25px, 150px);
+    }
+}
+
+.auto-fold,
+.folded {
+    .theme-overlay {
+
+        .theme-wrap {
+            left: calc(var(--admin-aside-width-folded) + 24px);
+        }
+    }
+}
+
 .theme-browser {
     .themes {
         display: grid;
@@ -29,5 +56,9 @@
                 border-color: var(--admin-primary);
             }
         }
+    }
+
+    .parent-theme {
+        border-radius: var(--admin-radius);
     }
 }

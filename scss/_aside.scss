@@ -29,7 +29,13 @@
     }
 }
 
+.auto-fold {
 
+    #wpcontent,
+    #wpfooter {
+        margin-left: calc(var(--admin-aside-width-folded) + 0px);
+    }
+}
 
 .wp-submenu-head {
     color: var(--admin-dark-clr) !important;

@@ -1,0 +1,29 @@
+// Fluid Clamp Function (existing)
+@function clamp-calc($min-size, $max-size) {
+  $slope: ($max-size - $min-size) / ($dev-max-width - $dev-min-width);
+  $y: -1 * $dev-min-width * $slope + $min-size;
+
+  @return clamp(
+    #{$min-size},
+    #{$y} + #{$slope} * 100vw,
+    #{$max-size}
+  );
+}
+
+// Mixin to generate CSS variables (existing)
+@mixin fluid-var($name, $min-size, $max-size) {
+  --#{$name}: #{clamp-calc($min-size, $max-size)};
+}
+
+// ------------------------------------------------------
+// NEW: Function to directly use inside any CSS property
+// ------------------------------------------------------
+
+@function fluid-value($min-size, $max-size) {
+  @return clamp-calc($min-size, $max-size);
+}
+
+// Example usage:
+// gap: fluid-value(16px, 30px);
+// padding: fluid-value(20px, 60px);
+// font-size: fluid-value(14px, 22px);

@@ -1,3 +1,11 @@
+$dev-mobile: 430px;
+$dev-tablet: 768px;
+$dev-desktop: 1224px;
+// Global device widths
+$dev-min-width: 430px;
+$dev-max-width: 1440px;
+
+
 :root {
     --top-offset: 5px;
     --top-bg: #1A1A1A;
