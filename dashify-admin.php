@@ -81,6 +81,26 @@ function dashify_admin_menu() {
 }
 add_action( 'admin_menu', 'dashify_admin_menu' );
 
+/*
+ * Add a "Settings" link on the plugins list which points to this plugin's settings page.
+ * Uses the plugin's basename in the filter so the link appears only for this plugin.
+ */
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'dashify_admin_settings_link' );
+
+/**
+ * Add the settings link to the plugin action links array.
+ *
+ * @param array $links Current plugin action links.
+ * @return array Filtered links including a settings link.
+ */
+function dashify_admin_settings_link( $links ) {
+    $url = esc_url( admin_url( 'admin.php?page=dashify-admin' ) );
+    $settings_link = '<a href="' . $url . '">' . esc_html__( 'Settings', 'dashify-admin' ) . '</a>';
+    // Add settings link to the beginning of the links array so it's visible.
+    array_unshift( $links, $settings_link );
+    return $links;
+}
+
 function dashify_admin_settings_page() {
     if ( ! current_user_can( 'manage_options' ) ) {
         return;

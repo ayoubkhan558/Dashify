@@ -45,7 +45,8 @@
         color: var(--admin-dark-clr) !important;
         border-radius: var(--admin-radius-md);
 
-        &:hover {
+        &:hover,
+        &:focus {
             box-shadow: none;
         }
 
@@ -56,7 +57,7 @@
 
         .wp-not-current-submenu .wp-submenu,
         .folded #adminmenu .wp-has-current-submenu .wp-submenu {
-            // min-width: var(--admin-aside-width);
+            // min-width: var(--admin-aside-width); 
         }
     }
 
@@ -157,6 +158,11 @@
 
     .wp-submenu {
         left: var(--admin-aside-width);
+    }
+
+
+    li.wp-has-submenu.wp-not-current-submenu:focus-within:after {
+        border-right-color: transparent;
     }
 
     li.wp-not-current-submenu.wp-has-submenu {

@@ -7,8 +7,10 @@
   --admin-primary: hsl(85, 48%, 53%);
   --admin-primary-light-1: hsl(from var(--admin-primary) h s calc(l + 12));
   --admin-primary-light-2: hsl(from var(--admin-primary) h s calc(l + 24));
+  --admin-primary-light-3: hsl(from var(--admin-primary) h s calc(l + 35));
   --admin-primary-dark-1: hsl(from var(--admin-primary) h s calc(l - 12));
   --admin-primary-dark-2: hsl(from var(--admin-primary) h s calc(l - 24));
+  --admin-primary-dark-3: hsl(from var(--admin-primary) h s calc(l - 36));
   --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
   --admin-warning: hsl(45, 100%, 51%);
   --admin-success: hsl(135, 100%, 41%);
@@ -139,7 +141,7 @@ body.wp-admin {
   color: var(--admin-dark-clr) !important;
   border-radius: var(--admin-radius-md);
 }
-#adminmenu a:hover {
+#adminmenu a:hover, #adminmenu a:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -195,6 +197,9 @@ body.wp-admin {
 #adminmenu .wp-submenu {
   left: var(--admin-aside-width);
 }
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:focus-within:after {
+  border-right-color: transparent;
+}
 #adminmenu li.wp-not-current-submenu.wp-has-submenu.opensub:hover:after {
   border-right-color: var(--admin-aside-bg-clr);
 }
@@ -222,14 +227,24 @@ body.wp-admin {
   overflow: hidden;
 }
 
+/* Tables styles */
+table {
+  border-radius: var(--admin-radius) !important;
+  overflow: hidden !important;
+}
+table thead th {
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
 /* Nav/Tabs styles */
 .nav-tab {
   border-radius: var(--admin-radius);
 }
 /* TABLES styles */
 table {
-  border-radius: var(--admin-radius-md) !important;
-  overflow: hidden;
+  border-radius: var(--admin-radius) !important;
+  overflow: hidden !important;
 }
 table thead th {
   font-size: 16px !important;
@@ -278,6 +293,7 @@ table thead th {
   background-color: var(--admin-dark-clr-shade-1);
   background: var(--admin-dark-clr-shade-1);
   border-color: var(--admin-dark-clr-tint-1);
+  color: #fff;
 }
 .wp-core-ui .button.button-primary:hover, .wp-core-ui .button.button-primary:focus, .wp-core-ui .button.button-primary:active {
   background: var(--admin-dark-clr);
@@ -287,6 +303,7 @@ table thead th {
   background-color: var(--admin-primary-light-1);
 }
 .wp-core-ui .button.button-secondary {
+  color: var(--admin-dark-clr);
   background-color: var(--admin-primary-light-2);
 }
 .wp-core-ui .button.button-secondary:hover, .wp-core-ui .button.button-secondary:focus, .wp-core-ui .button.button-secondary:active {
@@ -507,6 +524,32 @@ form .btn-submit:disabled {
   border-color: var(--admin-primary);
 }
 
+.scheme-list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.scheme-list .color-option {
+  width: 100%;
+  margin: 0;
+  border-radius: var(--admin-radius);
+  border: 1px solid var(--admin-primary);
+}
+.scheme-list .color-option.selected {
+  background: var(--admin-primary-light-1);
+  border-color: var(--admin-primary-light-1);
+}
+
+.user-profile-picture img {
+  border-radius: 100%;
+  border: 1px solid var(--admin-primary);
+}
+
+.upload-button {
+  border-radius: var(--admin-radius);
+}
+
 .plugin-card,
 .plugin-install-php .wp-filter {
   border-radius: var(--admin-radius);
@@ -559,6 +602,45 @@ form .btn-submit:disabled {
   display: none;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 0px 0px !important;
+}
+table table tr {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px !important;
+  /* background: #d63638 !important; */
+}
+table .plugin-update-tr.active td,
+table .plugins .active th.check-column {
+  border-width: 0 !important;
+}
+
+p.popular-tags {
+  border: none;
+  line-height: 1;
+  padding: 8px 12px 12px;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+p.popular-tags a {
+  font-size: 12px !important;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: var(--admin-radius);
+  color: #fff;
+  background: var(--admin-primary);
+}
+p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
+  background-color: var(--admin-primary-dark-1);
+}
+
 /* PLUGINS styles */
 .bricks-button-filter.button-secondary {
   background-color: var(--admin-primary-light-2);
@@ -581,6 +663,10 @@ form .btn-submit:disabled {
   width: calc(100% - 225px);
 }
 
+.acf-admin-page .acf-btn {
+  background-color: var(--admin-dark-clr-shade-1);
+  border-color: var(--admin-dark-clr-tint-1);
+}
 .acf-tab-wrap.-top {
   overflow: hidden;
 }
@@ -595,8 +681,8 @@ form .btn-submit:disabled {
 }
 
 .acf-postbox .acf-hndle-cog {
-  height: 30px;
-  line-height: 1.85;
+  height: 26px !important;
+  line-height: 1.75 !important;
 }
 
 .acf-btn {
@@ -619,12 +705,122 @@ form .btn-submit:disabled {
   border-radius: var(--admin-radius-sm);
 }
 
+.acf-field-accordion {
+  margin: 16px !important;
+  border: 0 !important;
+}
+.acf-field-accordion .acf-accordion-title {
+  overflow: hidden;
+  border-radius: var(--admin-radius);
+  border: 1px solid var(--acf-border-color);
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  position: relative;
+  padding: 18px 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+.acf-field-accordion .acf-accordion-title label {
+  color: #111;
+  pointer-events: none;
+}
+.acf-field-accordion .acf-accordion-title .acf-accordion-icon {
+  display: none !important;
+}
+.acf-field-accordion .acf-accordion-title:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid #111;
+  border-bottom: 1px solid #111;
+  -webkit-transform: rotate(-45deg) translateY(-5px);
+          transform: rotate(-45deg) translateY(-5px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.acf-field-accordion .acf-accordion-title.ui-state-active:after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.acf-field-accordion .acf-accordion-content {
+  padding: 16px 0 10px;
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-animation: accordionSlide 0.3s ease;
+          animation: accordionSlide 0.3s ease;
+}
+
+@-webkit-keyframes accordionSlide {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes accordionSlide {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.acf-field-group {
+  padding: 25px;
+  margin: 16px !important;
+  background-color: var(--admin-bg-main) !important;
+  border-radius: var(--admin-radius);
+  border: 1px dashed var(--admin-primary) !important;
+}
+.acf-field-group .acf-label label {
+  color: var(--admin-primary-dark-1);
+}
+.acf-field-group .acf-label label::before {
+  content: "# ";
+}
+.acf-field-group .acf-fields {
+  border-color: var(--admin-primary) !important;
+  border-radius: var(--admin-radius);
+}
+
+.mce-btn button,
+.wp-switch-editor {
+  border-radius: var(--admin-radius) !important;
+  overflow: hidden;
+  margin-bottom: 4px !important;
+}
+
 .acf-editor-wrap .wp-editor-container {
-  border-radius: var(--admin-radius-md);
+  border-radius: var(--admin-radius);
   overflow: hidden;
 }
 
 .acf-gallery {
-  border-radius: var(--admin-radius-md);
+  border-radius: var(--admin-radius);
+}
+
+#tmpl-acf-field-group-pro-features {
+  display: none !important;
 }
 /*# sourceMappingURL=theme.css.map */

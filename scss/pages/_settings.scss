@@ -1,0 +1,33 @@
+// Color schemes list
+.scheme-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+
+  .color-option {
+    width: 100%;
+    margin: 0;
+    border-radius: var(--admin-radius);
+    border: 1px solid var(--admin-primary);
+
+    &.selected {
+      background: var(--admin-primary-light-1);
+      border-color: var(--admin-primary-light-1);
+    }
+  }
+}
+
+
+.user-profile-picture {
+  img {
+    border-radius: 100%;
+    border: 1px solid var(--admin-primary);
+  }
+}
+
+
+.upload-button {
+  border-radius: var(--admin-radius);
+}
+
+.button-add-media {}

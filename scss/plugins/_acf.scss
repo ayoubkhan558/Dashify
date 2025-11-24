@@ -1,61 +1,180 @@
- .acf-tab-wrap.-top {
-     overflow: hidden;
- }
+.acf-admin-page {
+    .acf-btn {
+        background-color: var(--admin-dark-clr-shade-1);
+        border-color: var(--admin-dark-clr-tint-1);
 
- .acf-tab-group {
-     padding: var(--admin-padding);
+        .acf-btn-sm {}
+    }
+}
 
- }
+.acf-tab-wrap.-top {
+    overflow: hidden;
+}
 
- .acf-tab-button {
-     border-radius: var(--admin-radius);
-     border-bottom: 1px solid var(--acf-border-color) !important;
- }
+.acf-tab-group {
+    padding: var(--admin-padding);
 
- .acf-postbox .acf-hndle-cog {
-     height: 30px;
-     line-height: 1.85;
- }
+}
 
- // acf buttons 
- .acf-btn {
-     background-color: var(--admin-bg-main);
-     border-radius: var(--admin-radius-md);
+.acf-tab-button {
+    border-radius: var(--admin-radius);
+    border-bottom: 1px solid var(--acf-border-color) !important;
+}
 
-     &.acf-btn-secondary {
-         background-color: var(--admin-primary-light-2);
+.acf-postbox .acf-hndle-cog {
+    height: 26px !important;
+    line-height: 1.75 !important;
+}
 
-         &:hover,
-         &:focus,
-         &:active {
-             background-color: var(--admin-primary-light-1);
-         }
-     }
+// acf buttons 
+.acf-btn {
+    background-color: var(--admin-bg-main);
+    border-radius: var(--admin-radius-md);
 
-     &.acf-publish {
-         background-color: var(--admin-primary);
+    &.acf-btn-secondary {
+        background-color: var(--admin-primary-light-2);
 
-         &:hover,
-         &:focus,
-         &:active {
-             background-color: var(--admin-primary-light-1);
-         }
-     }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--admin-primary-light-1);
+        }
+    }
 
+    &.acf-publish {
+        background-color: var(--admin-primary);
 
-     &.acf-btn-sm {
-         border-radius: var(--admin-radius-sm);
-     }
- }
-
-
- // acf editor styles
- .acf-editor-wrap .wp-editor-container {
-     border-radius: var(--admin-radius-md);
-     overflow: hidden;
- }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--admin-primary-light-1);
+        }
+    }
 
 
- .acf-gallery {
-     border-radius: var(--admin-radius-md);
- }
+    &.acf-btn-sm {
+        border-radius: var(--admin-radius-sm);
+    }
+}
+
+.acf-accordion {}
+
+.acf-field-accordion {
+    .acf-accordion-title {
+        label {}
+    }
+
+    .acf-accordion-content {}
+}
+
+.acf-field-accordion {
+    margin: 16px !important;
+    border: 0 !important;
+
+    .acf-accordion-title {
+        overflow: hidden;
+        border-radius: var(--admin-radius);
+        border: 1px solid var(--acf-border-color);
+        box-shadow: var(--admin-box-shadow);
+        position: relative;
+        padding: 18px 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        letter-spacing: 0.2px;
+
+        label {
+            color: #111;
+            pointer-events: none;
+        }
+
+        .acf-accordion-icon {
+            display: none !important;
+        }
+
+        &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-left: 1px solid #111;
+            border-bottom: 1px solid #111;
+            transform: rotate(-45deg) translateY(-5px);
+            transition: transform .3s ease;
+        }
+
+        &.ui-state-active:after {
+            transform: rotate(135deg);
+        }
+    }
+
+    .acf-accordion-content {
+        padding: 16px 0 10px;
+        border-bottom: 1px solid #e5e5e5;
+        animation: accordionSlide .3s ease;
+    }
+}
+
+@keyframes accordionSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+// ACF Groups
+.acf-field-group {
+    padding: 25px;
+    margin: 16px !important;
+    background-color: var(--admin-bg-main) !important;
+    border-radius: var(--admin-radius);
+    border: 1px dashed var(--admin-primary) !important;
+
+    .acf-label label {
+        color: var(--admin-primary-dark-1);
+
+        &::before {
+            content: "# ";
+        }
+    }
+
+    .acf-fields {
+        border-color: var(--admin-primary) !important;
+        border-radius: var(--admin-radius);
+    }
+}
+
+
+
+
+// acf editor styles
+.mce-btn button,
+.wp-switch-editor {
+    border-radius: var(--admin-radius) !important;
+    overflow: hidden;
+    margin-bottom: 4px !important;
+}
+
+.acf-editor-wrap .wp-editor-container {
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+}
+
+
+.acf-gallery {
+    border-radius: var(--admin-radius);
+}
+
+
+
+#tmpl-acf-field-group-pro-features {
+    display: none !important;
+}

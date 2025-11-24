@@ -9,6 +9,7 @@
             background-color: var(--admin-dark-clr-shade-1);
             background: var(--admin-dark-clr-shade-1);
             border-color: var(--admin-dark-clr-tint-1);
+            color: #fff;
 
             &:hover,
             &:focus,
@@ -24,6 +25,7 @@
         }
 
         &.button-secondary {
+            color: var(--admin-dark-clr);
             background-color: var(--admin-primary-light-2);
 
             &:hover,
