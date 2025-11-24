@@ -21,22 +21,22 @@
     // varaints
     &.notice-warning {
         color: var(--admin-warning);
-        background-color: hsla(from var(--admin-warning) h calc(s - 75) calc(l + 35));
+        background-color: var(--admin-warning--bg);
     }
 
     &.notice-success {
         color: var(--admin-success);
-        background-color: hsla(from var(--admin-success) h calc(s - 75) calc(l + 35));
+        background-color: var(--admin-success-bg);
     }
 
     &.notice-info {
         color: var(--admin-info);
-        background-color: hsla(from var(--admin-info) h calc(s - 75) calc(l + 35));
+        background-color: var(--admin-info-bg);
     }
 
     &.notice-error {
         color: var(--admin-danger);
-        background-color: hsla(from var(--admin-danger) h calc(s - 75) calc(l + 35));
+        background-color: var(--admin-danger-bg);
     }
 
     // plugins page warning 

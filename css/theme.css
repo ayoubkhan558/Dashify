@@ -11,23 +11,34 @@
   --admin-primary-dark-1: hsl(from var(--admin-primary) h s calc(l - 12));
   --admin-primary-dark-2: hsl(from var(--admin-primary) h s calc(l - 24));
   --admin-primary-dark-3: hsl(from var(--admin-primary) h s calc(l - 36));
+  --admin-secondary: hsl(86, 100%, 1%);
+  --admin-secondary-light-1: hsl(from var(--admin-secondary) h s calc(l + 12));
+  --admin-secondary-light-2: hsl(from var(--admin-secondary) h s calc(l + 24));
+  --admin-secondary-light-3: hsl(from var(--admin-secondary) h s calc(l + 35));
+  --admin-secondary-dark-1: hsl(from var(--admin-secondary) h s calc(l - 12));
+  --admin-secondary-dark-2: hsl(from var(--admin-secondary) h s calc(l - 24));
+  --admin-secondary-dark-3: hsl(from var(--admin-secondary) h s calc(l - 36));
   --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
   --admin-warning: hsl(45, 100%, 51%);
+  --admin-warning-bg: #FFF1E3;
   --admin-success: hsl(135, 100%, 41%);
+  --admin-success-bg: #e5feea;
   --admin-danger: hsl(0, 78%, 62%);
+  --admin-danger-bg: hsl(0, 89%, 89%);
   --admin-info: hsl(205, 100%, 36%);
+  --admin-info-bg: hsl(204, 84%, 87%);
   /* Text colors */
   --admin-dark-clr: hsl(0, 2%, 9%);
   --admin-dark-clr-tint-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
-  --admin-dark-clr-tint-2: hsl(from var(--admin-dark-clr) h s calc(l + 12));
-  --admin-dark-clr-shade-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
-  --admin-dark-clr-shade-2: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+  --admin-dark-clr-tint-2: hsl(from var(--admin-dark-clr) h s calc(l + 24));
+  --admin-dark-clr-shade-1: hsl(from var(--admin-dark-clr) h s calc(l - 12));
+  --admin-dark-clr-shade-2: hsl(from var(--admin-dark-clr) h s calc(l - 24));
   /* Background colors */
   --admin-bg-main: hsl(0, 0%, 95%);
   --admin-bg-main-light-1: hsl(from var(--admin-bg-main) h s calc(l + 12));
-  --admin-bg-main-light-2: hsl(from var(--admin-bg-main) h s calc(l + 12));
-  --admin-bg-main-dark-1: hsl(from var(--admin-bg-main) h s calc(l + 12));
-  --admin-bg-main-dark-2: hsl(from var(--admin-bg-main) h s calc(l + 12));
+  --admin-bg-main-light-2: hsl(from var(--admin-bg-main) h s calc(l + 24));
+  --admin-bg-main-dark-1: hsl(from var(--admin-bg-main) h s calc(l - 12));
+  --admin-bg-main-dark-2: hsl(from var(--admin-bg-main) h s calc(l - 24));
   /* Border colors */
   --admin-border-color: #ebebeb;
   --admin-border-color-light-1: #ebebeb;
@@ -212,9 +223,46 @@ body.wp-admin {
 
 /* navigation styles */
 #wpadminbar {
-  border-radius: 0 0 var(--admin-radius) var(--admin-radius);
   background-color: var(--top-bg);
   padding: var(--top-offset);
+}
+
+#wp-admin-bar-wp-logo {
+  display: none;
+}
+
+#wpadminbar #wp-admin-bar-user-info img {
+  border-radius: 50%;
+  border: 2px solid var(--admin-primary);
+}
+#wpadminbar .menupop li a.ab-item {
+  border-radius: var(--admin-radius);
+  color: var(--admin-primary);
+}
+#wpadminbar .menupop li:hover a, #wpadminbar .menupop li:focus a, #wpadminbar .menupop li:active a {
+  color: var(--admin-primary) !important;
+}
+#wpadminbar .menupop.hover > a.ab-item .ab-label {
+  color: var(--admin-primary) !important;
+}
+#wpadminbar .menupop.hover > a.ab-item > .ab-icon::before {
+  color: var(--admin-primary) !important;
+}
+#wpadminbar .menupop .ab-sub-wrapper,
+#wpadminbar .menupop .shortlink-input {
+  border-radius: var(--admin-radius);
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+}
+#wpadminbar .ab-top-menu > li.hover > .ab-item .ab-label, #wpadminbar .ab-top-menu > li:hover > .ab-item .ab-label, #wpadminbar .ab-top-menu > li:focus > .ab-item .ab-label {
+  color: var(--admin-primary);
+}
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus .ab-label {
+  color: var(--admin-primary) !important;
+}
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item .ab-label,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus .ab-label {
+  color: var(--admin-primary) !important;
 }
 
 /* Cards styles */
@@ -262,19 +310,19 @@ table thead th {
 }
 .notice.notice-warning {
   color: var(--admin-warning);
-  background-color: hsla(from var(--admin-warning) h calc(s - 75) calc(l + 35));
+  background-color: var(--admin-warning--bg);
 }
 .notice.notice-success {
   color: var(--admin-success);
-  background-color: hsla(from var(--admin-success) h calc(s - 75) calc(l + 35));
+  background-color: var(--admin-success-bg);
 }
 .notice.notice-info {
   color: var(--admin-info);
-  background-color: hsla(from var(--admin-info) h calc(s - 75) calc(l + 35));
+  background-color: var(--admin-info-bg);
 }
 .notice.notice-error {
   color: var(--admin-danger);
-  background-color: hsla(from var(--admin-danger) h calc(s - 75) calc(l + 35));
+  background-color: var(--admin-danger-bg);
 }
 .notice.update-message.notice-warning {
   background-color: white;
@@ -686,17 +734,20 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
 }
 
 .acf-btn {
-  background-color: var(--admin-bg-main);
-  border-radius: var(--admin-radius-md);
+  font-weight: 600;
+  border-radius: var(--admin-radius) !important;
+  border-width: 2px !important;
 }
-.acf-btn.acf-btn-secondary {
-  background-color: var(--admin-primary-light-2);
+.acf-btn-secondary {
+  color: #fff !important;
+  background-color: var(--admin-secondary) !important;
 }
-.acf-btn.acf-btn-secondary:hover, .acf-btn.acf-btn-secondary:focus, .acf-btn.acf-btn-secondary:active {
-  background-color: var(--admin-primary-light-1);
+.acf-btn-secondary:hover, .acf-btn-secondary:focus, .acf-btn-secondary:active {
+  background-color: var(--admin-secondary-light-1) !important;
 }
 .acf-btn.acf-publish {
-  background-color: var(--admin-primary);
+  color: var(--admin-dark) !important;
+  background-color: var(--admin-primary-light-2);
 }
 .acf-btn.acf-publish:hover, .acf-btn.acf-publish:focus, .acf-btn.acf-publish:active {
   background-color: var(--admin-primary-light-1);

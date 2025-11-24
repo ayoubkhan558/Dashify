@@ -28,21 +28,31 @@
 
 // acf buttons 
 .acf-btn {
-    background-color: var(--admin-bg-main);
-    border-radius: var(--admin-radius-md);
+    font-weight: 600;
+    // background-color: var(--admin-bg-main);
+    border-radius: var(--admin-radius) !important;
+    border-width: 2px !important;
 
-    &.acf-btn-secondary {
-        background-color: var(--admin-primary-light-2);
+    &:hover,
+    &:focus,
+    &:active {
+        // background-color: var(--admin-bg-main-light-1) !important;
+    }
+
+    &-secondary {
+        color: #fff !important;
+        background-color: var(--admin-secondary) !important;
 
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--admin-primary-light-1);
+            background-color: var(--admin-secondary-light-1) !important;
         }
     }
 
     &.acf-publish {
-        background-color: var(--admin-primary);
+        color: var(--admin-dark) !important;
+        background-color: var(--admin-primary-light-2);
 
         &:hover,
         &:focus,
