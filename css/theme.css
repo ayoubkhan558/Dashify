@@ -19,9 +19,9 @@
   --admin-secondary-dark-2: hsl(from var(--admin-secondary) h s calc(l - 24));
   --admin-secondary-dark-3: hsl(from var(--admin-secondary) h s calc(l - 36));
   --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
-  --admin-warning: hsl(45, 100%, 51%);
+  --admin-warning: hsl(45, 98%, 46%);
   --admin-warning-bg: #FFF1E3;
-  --admin-success: hsl(135, 100%, 41%);
+  --admin-success: hsl(135, 100%, 31%);
   --admin-success-bg: #e5feea;
   --admin-danger: hsl(0, 78%, 62%);
   --admin-danger-bg: hsl(0, 89%, 89%);
@@ -311,15 +311,15 @@ table thead th {
 }
 .notice.updated {
   color: var(--admin-success);
-  background-color: hsla(from var(--admin-success) h calc(s - 75) calc(l + 35));
-}
-.notice.notice-warning {
-  color: var(--admin-warning);
-  background-color: var(--admin-warning--bg);
+  background-color: var(--admin-success-bg);
 }
 .notice.notice-success {
   color: var(--admin-success);
   background-color: var(--admin-success-bg);
+}
+.notice.notice-warning {
+  color: var(--admin-warning);
+  background-color: var(--admin-warning--bg);
 }
 .notice.notice-info {
   color: var(--admin-info);

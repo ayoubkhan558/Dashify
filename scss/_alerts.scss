@@ -5,11 +5,6 @@
 
     &.is-dismissible {}
 
-    &.updated {
-        color: var(--admin-success);
-        background-color: hsla(from var(--admin-success) h calc(s - 75) calc(l + 35));
-    }
-
     &.update-message {}
 
 
@@ -17,16 +12,20 @@
 
     &.notice-alt {}
 
-
-    // varaints
-    &.notice-warning {
-        color: var(--admin-warning);
-        background-color: var(--admin-warning--bg);
+    &.updated {
+        color: var(--admin-success);
+        background-color: var(--admin-success-bg);
     }
 
+    // varaints 
     &.notice-success {
         color: var(--admin-success);
         background-color: var(--admin-success-bg);
+    }
+
+    &.notice-warning {
+        color: var(--admin-warning);
+        background-color: var(--admin-warning--bg);
     }
 
     &.notice-info {
