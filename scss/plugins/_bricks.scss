@@ -25,7 +25,7 @@
 #bricks-settings {
     input[type=checkbox] {
         &:checked {
-            background-color: var(--admin-primary);
+            background-color: var(--admin-primary) !important;
         }
     }
 }

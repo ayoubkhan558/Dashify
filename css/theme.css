@@ -753,7 +753,7 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
 }
 
 #bricks-settings input[type=checkbox]:checked {
-  background-color: var(--admin-primary);
+  background-color: var(--admin-primary) !important;
 }
 
 #wpbody-content #fca_admin_menu_holder .fca_admin_menu_wrap {
