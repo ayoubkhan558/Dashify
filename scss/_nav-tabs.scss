@@ -1,5 +1,6 @@
 .nav-tab {
     border-radius: var(--admin-radius);
+    border-bottom-width: 1px !important;
 
     &.nav-tab-active {}
 }

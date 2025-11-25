@@ -20,3 +20,12 @@
     border-radius: var(--admin-radius);
     overflow: hidden;
 }
+
+
+#bricks-settings {
+    input[type=checkbox] {
+        &:checked {
+            background-color: var(--admin-primary);
+        }
+    }
+}

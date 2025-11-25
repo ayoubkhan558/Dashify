@@ -293,6 +293,7 @@ table thead th {
 /* Nav/Tabs styles */
 .nav-tab {
   border-radius: var(--admin-radius);
+  border-bottom-width: 1px !important;
 }
 /* TABLES styles */
 table {
@@ -420,8 +421,19 @@ a:hover, a:focus, a:active {
 }
 
 /* FORMS styles */
+form {
+  /* All form elements that support accent-color */
+}
+form input[type=checkbox],
+form input[type=radio],
+form input[type=range],
+form input[type=color],
+form progress,
+form meter {
+  accent-color: var(--admin-primary);
+}
 .wp-filter-search {
-  border-radius: var(--admin-radius-md);
+  border-radius: var(--admin-radius);
 }
 
 form label {
@@ -738,6 +750,10 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
 .bricks-admin-inner {
   border-radius: var(--admin-radius);
   overflow: hidden;
+}
+
+#bricks-settings input[type=checkbox]:checked {
+  background-color: var(--admin-primary);
 }
 
 #wpbody-content #fca_admin_menu_holder .fca_admin_menu_wrap {

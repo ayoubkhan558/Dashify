@@ -1,10 +1,21 @@
 form {
+
+    /* All form elements that support accent-color */
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="range"],
+    input[type="color"],
+    progress,
+    meter {
+        accent-color: var(--admin-primary);
+    }
+
     input {}
 }
 
 
 .wp-filter-search {
-    border-radius: var(--admin-radius-md);
+    border-radius: var(--admin-radius);
 }
 
 
