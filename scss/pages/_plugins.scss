@@ -66,6 +66,19 @@
     display: none;
 }
 
+.upload-plugin {
+    padding: 0;
+
+    .wp-upload-form {
+        border-style: dashed;
+        border-radius: var(--admin-radius);
+        background-color: #fff;
+
+        input {
+            border: 0;
+        }
+    }
+}
 
 
 // plugin listing
@@ -77,7 +90,7 @@ table {
     table {
         tr {
             box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .1);
-            border-radius: 12px !important;
+            border-radius: var(--admin-radius) !important;
             /* background: #d63638 !important; */
         }
     }

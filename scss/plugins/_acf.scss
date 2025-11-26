@@ -40,14 +40,14 @@
         // background-color: var(--admin-bg-main-light-1) !important;
     }
 
-    &-secondary {
+    &.acf-btn-secondary {
         color: #fff !important;
-        background-color: var(--admin-secondary) !important;
+        background-color: var(--admin-secondary);
 
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--admin-secondary-light-1) !important;
+            background-color: var(--admin-secondary-light-1);
         }
     }
 
@@ -66,6 +66,13 @@
     &.acf-btn-sm {
         border-radius: var(--admin-radius-sm);
     }
+}
+
+.acf-image-uploader p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .acf-accordion {}
