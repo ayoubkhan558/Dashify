@@ -83,8 +83,6 @@ form {
     // Checkbox / Radio Base
     input[type="checkbox"],
     input[type="radio"] {
-        width: 18px;
-        height: 18px;
         accent-color: var(--admin-primary);
         cursor: pointer;
     }

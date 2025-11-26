@@ -27,6 +27,11 @@
     line-height: 1.75 !important;
 }
 
+.no-value-message {
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+}
+
 // acf buttons 
 .acf-btn {
     font-weight: 600;
