@@ -1,0 +1,17 @@
+.health-check-accordion {
+  border: 0 !important;
+
+  .health-check-accordion-heading {
+    margin-bottom: 10px;
+  }
+
+  .health-check-accordion-trigger {
+    border-radius: var(--admin-radius);
+
+    .badge {
+      border-radius: var(--admin-radius-sm);
+    }
+  }
+
+
+}

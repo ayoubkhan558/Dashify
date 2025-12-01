@@ -35,7 +35,7 @@ $dev-max-width: 1440px;
     --admin-success-bg: #e5feea;
     --admin-danger: hsl(0, 78%, 62%);
     --admin-danger-bg: hsl(0, 89%, 89%);
-    --admin-info: hsl(205, 100%, 36%);  
+    --admin-info: hsl(205, 100%, 36%);
     --admin-info-bg: hsl(204, 84%, 87%);
 
     /* Text colors */
@@ -84,6 +84,12 @@ $dev-max-width: 1440px;
 
     /* Shadows */
     --admin-box-shadow: 0rem .3125rem .3125rem -.15625rem rgba(0, 0, 0, .03),
+        0rem .1875rem .1875rem -.09375rem rgba(0, 0, 0, .02),
+        0rem .125rem .125rem -.0625rem rgba(0, 0, 0, .02),
+        0rem .0625rem .0625rem -.03125rem rgba(0, 0, 0, .03),
+        0rem .03125rem .03125rem 0rem rgba(0, 0, 0, .04),
+        0rem 0rem 0rem .0625rem rgba(0, 0, 0, .06);
+    --admin-box-shadow-alt: 0rem .3125rem .3125rem -.15625rem rgba(0, 0, 0, .03),
         0rem .1875rem .1875rem -.09375rem rgba(0, 0, 0, .02),
         0rem .125rem .125rem -.0625rem rgba(0, 0, 0, .02),
         0rem .0625rem .0625rem -.03125rem rgba(0, 0, 0, .03),

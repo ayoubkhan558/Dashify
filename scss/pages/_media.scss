@@ -1,0 +1,20 @@
+.media-frame {
+  // media right col
+
+  .media-toolbar {
+    border-radius: var(--admin-radius);
+    // border: 1px solid var(--admin-border-color);
+    // overflow: hidden;
+    box-shadow: var(--admin-box-shadow);
+  }
+
+  // media grid 
+  .attachments-wrapper {
+    .attachment {
+      .attachment-preview {
+        border-radius: var(--admin-radius);
+        overflow: hidden !important;
+      }
+    }
+  }
+}

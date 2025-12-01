@@ -1,22 +1,27 @@
-
-
-#wpcontent, #wpfooter {
+#wpcontent,
+#wpfooter {
     margin-left: var(--admin-aside-width);
 }
 
 /* admin cards */
 .postbox {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
-}
+    @include card;
 
-.postbox .postbox-header {
-    border-bottom-color: var(--admin-border-color-light-1);
+    .postbox-header {
+        border-bottom-color: var(--admin-border-color-light-1);
+    }
+
 }
 
 /* post title */
 #titlewrap input {
-    border-radius: var(--admin-radius);
-    border-width: 2px;
-    box-shadow: none;
+    @include card;
+}
+
+hr.wp-header-end {
+    visibility: visible;
+    margin: 0;
+    padding-top: 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #cdcdcd;
 }

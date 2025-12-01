@@ -1,0 +1,20 @@
+#wpcontent:has(#comment-status-radio) {
+  .edit-comment-section {}
+
+  .postbox,
+  .stuffbox {
+    border-radius: var(--admin-radius);
+    border: 1px solid var(--admin-border-color);
+    overflow: hidden;
+    box-shadow: var(--admin-box-shadow);
+  }
+
+
+
+  .wp-editor-wrap {
+    border-radius: var(--admin-radius);
+    border: 1px solid var(--admin-border-color);
+    overflow: hidden;
+    box-shadow: var(--admin-box-shadow);
+  }
+}

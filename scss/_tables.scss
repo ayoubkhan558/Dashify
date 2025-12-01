@@ -1,9 +1,17 @@
 table {
+    box-shadow: var(--admin-box-shadow) !important;
     border-radius: var(--admin-radius) !important;
     overflow: hidden !important;
 
     thead th {
         font-size: 16px !important;
         font-weight: 600;
+    }
+}
+
+
+body.wpcac-horizontal-scroll {
+    .wpcac-horizontal-scroll-table {
+        padding-bottom: 15px;
     }
 }

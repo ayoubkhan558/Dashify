@@ -43,8 +43,7 @@
 
 // Create your first menu below.
 .manage-menus {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
+    @include card-alt;
 }
 
 .menu {

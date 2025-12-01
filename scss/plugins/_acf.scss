@@ -11,25 +11,37 @@
     overflow: hidden;
 }
 
-.acf-tab-group {
-    padding: var(--admin-padding);
 
+
+.acf-fields {
+    .acf-tab-group {
+        padding: var(--admin-padding);
+
+    }
+
+    .acf-tab-button {
+        border-radius: var(--admin-radius);
+        border-bottom: 1px solid var(--acf-border-color) !important;
+        margin-bottom: 5px;
+    }
+
+    .values {
+        .layout {
+            border-radius: var(--admin-radius);
+            overflow: hidden;
+        }
+    }
 }
 
-.acf-tab-button {
-    border-radius: var(--admin-radius);
-    border-bottom: 1px solid var(--acf-border-color) !important;
-    margin-bottom: 5px;
-}
-
-.acf-postbox .acf-hndle-cog {
-    height: 26px !important;
-    line-height: 1.75 !important;
+.acf-postbox {
+    .acf-hndle-cog {
+        height: 26px !important;
+        line-height: 1.75 !important;
+    }
 }
 
 .no-value-message {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
+    @include card-alt;
 }
 
 // acf buttons 
@@ -187,8 +199,7 @@
 }
 
 .acf-editor-wrap .wp-editor-container {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
+    @include card-alt;
 }
 
 

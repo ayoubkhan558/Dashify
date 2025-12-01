@@ -1,9 +1,8 @@
-
-
-// welcome screen 
-.meta-box-sortables {
-    border-radius: 12px;
+.card {
+    @include card;
 }
+
+// welcome screen  
 
 // screen options 
 #screen-meta {
@@ -12,3 +11,10 @@
 }
 
 
+#misc-publishing-actions .misc-pub-section {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#major-publishing-actions {
+    background-color: var(--admin-bg-main-light-1);
+}

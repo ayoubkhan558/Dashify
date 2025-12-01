@@ -31,11 +31,15 @@
 
 
 /* Pages/Screen styles */
+@import "./scss/pages/media";
+@import "./scss/pages/comments";
+@import "./scss/pages/taxonomy";
 @import "./scss/pages/editor";
 @import "./scss/pages/menu";
 @import "./scss/pages/themes";
 @import "./scss/pages/settings";
 @import "./scss/pages/plugins";
+@import "./scss/pages/site-health";
 
 /* PLUGINS styles */
 @import "./scss/plugins/bricks";

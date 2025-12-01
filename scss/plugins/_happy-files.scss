@@ -1,8 +1,25 @@
 // Happy files 
 .nav-tab-wrapper {
     li {
-        .nav-tab {
-            
+        .nav-tab {}
+    }
+}
+
+
+#happyfiles-search-folders {
+    border-radius: var(--admin-radius-md);
+    // box-shadow: var(--admin-box-shadow);
+}
+
+
+#happyfiles-sidebar {
+    .folders {
+        .folder {
+            border-radius: var(--admin-radius-md);
         }
+
+        &.default {}
+
+        &.custom {}
     }
 }

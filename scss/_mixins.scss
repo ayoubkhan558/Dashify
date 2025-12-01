@@ -1,13 +1,13 @@
 // Fluid Clamp Function (existing)
 @function clamp-calc($min-size, $max-size) {
-  $slope: ($max-size - $min-size) / ($dev-max-width - $dev-min-width);
-  $y: -1 * $dev-min-width * $slope + $min-size;
-
-  @return clamp(
-    #{$min-size},
-    #{$y} + #{$slope} * 100vw,
-    #{$max-size}
+  $slope: (
+    $max-size - $min-size) / ($dev-max-width - $dev-min-width
   );
+$y: -1 * $dev-min-width * $slope + $min-size;
+
+@return clamp(#{$min-size},
+  #{$y} + #{$slope} * 100vw,
+  #{$max-size});
 }
 
 // Mixin to generate CSS variables (existing)
@@ -27,3 +27,43 @@
 // gap: fluid-value(16px, 30px);
 // padding: fluid-value(20px, 60px);
 // font-size: fluid-value(14px, 22px);
+
+// _mixins.scss
+
+@mixin card($padding: 1rem) {
+  // background: #fff;
+  // padding: $padding;  
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  box-shadow: var(--admin-box-shadow);
+  border: 0;
+}
+
+@mixin card-alt($padding: 1rem) {
+  // background: #fff;
+  // padding: $padding;  
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  // box-shadow: var(--admin-box-shadow);
+  border: 0;
+}
+
+@mixin badge($padding: 1rem) {
+  // background: #fff;
+  // padding: $padding;  
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  // box-shadow: var(--admin-box-shadow);
+  border: 0;
+}
+
+@mixin table($padding: 1rem) {
+  // background: #fff;
+  // padding: $padding;  
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  // box-shadow: var(--admin-box-shadow);
+  // border: 0;
+}
+
+// @include card;

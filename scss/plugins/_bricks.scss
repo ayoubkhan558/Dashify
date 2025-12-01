@@ -17,8 +17,7 @@
 }
 
 .bricks-admin-inner {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
+    @include card-alt;
 }
 
 

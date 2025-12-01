@@ -18,6 +18,11 @@
 }
 
 
+#site-icon-preview {
+  @include card;
+}
+
+
 .user-profile-picture {
   img {
     border-radius: 100%;

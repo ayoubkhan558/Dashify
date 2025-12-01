@@ -1,8 +1,7 @@
 // plugins 
 .plugin-card,
 .plugin-install-php .wp-filter {
-    border-radius: var(--admin-radius);
-    overflow: hidden;
+    @include card;
 }
 
 .plugin-card {
@@ -98,6 +97,18 @@ table {
     .plugin-update-tr.active td,
     .plugins .active th.check-column {
         border-width: 0 !important;
+    }
+
+    .plugins {
+        .second {
+            font-style: italic;
+            font-weight: 400;
+
+            a {
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
     }
 }
 

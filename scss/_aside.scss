@@ -164,6 +164,15 @@
 
     .wp-submenu {
         left: var(--admin-aside-width);
+
+        a {
+            color: var(--admin-dark-clr) !important;
+        }
+
+        a:hover,
+        li.current a {
+            color: var(--admin-primary-dark-1) !important;
+        }
     }
 
 
@@ -179,12 +188,5 @@
         &.opensub:hover:after {
             border-right-color: var(--admin-aside-bg-clr);
         }
-    }
-
-    .wp-submenu li.current a,
-    .wp-submenu a,
-    .wp-submenu a:hover,
-    a:hover {
-        color: var(--admin-dark-clr);
     }
 }
