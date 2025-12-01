@@ -2,14 +2,14 @@
     .button {
         overflow: hidden !important;
         font-weight: 600;
-        background-color: var(--admin-bg-main) !important;
+        background-color: var(--admin-bg-main);
         border-radius: var(--admin-radius-md) !important;
 
         &.button-primary {
             background-color: var(--admin-dark-clr-shade-1);
-            background: var(--admin-dark-clr-shade-1);
-            border-color: var(--admin-dark-clr-tint-1);
-            color: #fff;
+            background: var(--admin-dark-clr-shade-1) !important;
+            border-color: var(--admin-dark-clr-tint-1) !important;
+            color: #fff !important;
 
             &:hover,
             &:focus,
@@ -31,18 +31,18 @@
             &:hover,
             &:focus,
             &:active {
-                background-color: var(--admin-primary-light-1);
+                background-color: var(--admin-primary-light-1) !important;
             }
         }
 
         &.button-secondary {
-            color: var(--admin-dark-clr);
-            background-color: var(--admin-primary-light-2);
+            color: var(--admin-dark-clr) !important;
+            background-color: var(--admin-primary-light-2) !important;
 
             &:hover,
             &:focus,
             &:active {
-                background-color: var(--admin-primary-light-1);
+                background-color: var(--admin-primary-light-1) !important;
             }
         }
 

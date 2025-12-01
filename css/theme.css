@@ -352,6 +352,7 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
 .notice {
   border-radius: var(--admin-radius);
   border-width: 0 !important;
+  background-color: #fff;
 }
 .notice.updated {
   color: var(--admin-success);
@@ -383,14 +384,14 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
 .wp-core-ui .button {
   overflow: hidden !important;
   font-weight: 600;
-  background-color: var(--admin-bg-main) !important;
+  background-color: var(--admin-bg-main);
   border-radius: var(--admin-radius-md) !important;
 }
 .wp-core-ui .button.button-primary {
   background-color: var(--admin-dark-clr-shade-1);
-  background: var(--admin-dark-clr-shade-1);
-  border-color: var(--admin-dark-clr-tint-1);
-  color: #fff;
+  background: var(--admin-dark-clr-shade-1) !important;
+  border-color: var(--admin-dark-clr-tint-1) !important;
+  color: #fff !important;
 }
 .wp-core-ui .button.button-primary:hover, .wp-core-ui .button.button-primary:focus, .wp-core-ui .button.button-primary:active {
   background: var(--admin-dark-clr);
@@ -404,14 +405,14 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
   background-color: var(--admin-primary-light-2);
 }
 .wp-core-ui .button.activate:hover, .wp-core-ui .button.activate:focus, .wp-core-ui .button.activate:active {
-  background-color: var(--admin-primary-light-1);
+  background-color: var(--admin-primary-light-1) !important;
 }
 .wp-core-ui .button.button-secondary {
-  color: var(--admin-dark-clr);
-  background-color: var(--admin-primary-light-2);
+  color: var(--admin-dark-clr) !important;
+  background-color: var(--admin-primary-light-2) !important;
 }
 .wp-core-ui .button.button-secondary:hover, .wp-core-ui .button.button-secondary:focus, .wp-core-ui .button.button-secondary:active {
-  background-color: var(--admin-primary-light-1);
+  background-color: var(--admin-primary-light-1) !important;
 }
 .wp-core-ui .button.button-link, .wp-core-ui .button.button-link-delete {
   background-color: transparent;
