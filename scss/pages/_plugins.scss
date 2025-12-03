@@ -42,10 +42,14 @@
     }
 }
 
-.wp-filter+p {
-    /* display: none; */
-    opacity: 0;
-    margin: 0px;
+.wp-filter {
+    margin-bottom: 20px !important;
+
+    &+p {
+        /* display: none; */
+        opacity: 0;
+        margin: 0px;
+    }
 }
 
 .column-compatibility:has(.compatibility-untested)::after {
@@ -70,11 +74,88 @@
 
     .wp-upload-form {
         border-style: dashed;
+        border-width: 2px;
         border-radius: var(--admin-radius);
         background-color: #fff;
 
         input {
             border: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-style: solid;
+        }
+    }
+}
+
+.filter-links {
+    // background-color: var(--admin-aside-bg-clr);
+    // border-radius: var(--admin-radius-sm);
+    padding: 5px 0px;
+
+    li {
+        &>a {
+            border: 1px solid var(--admin-border-color) !important;
+            border-radius: var(--admin-radius-sm);
+            margin: 5px 5px 5px 0;
+            padding: 5px 10px;
+            background-color: var(--admin-aside-bg-clr);
+
+            &[aria-current=page] {
+                box-shadow: var(--admin-btn-shadow);
+                background-color: var(--admin-aside-bg-clr-light-2);
+            }
+        }
+    }
+}
+
+#file-upload-button,
+#pluginzip {
+    font-style: italic;
+
+    &::file-selector-button
+
+    /* &::-ms-browse, */
+    /* &::-webkit-file-upload-button, */
+        {
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: var(--admin-radius-sm);
+        background-color: var(--admin-primary);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--admin-primary-dark-1);
+        }
+    }
+}
+
+
+#drag-drop-area {
+    height: auto !important;
+    padding: 50px !important;
+
+    .drag-drop-inside {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    #plupload-browse-button {
+        font-style: italic;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: var(--admin-radius-sm);
+        background-color: var(--admin-primary);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--admin-primary-dark-1);
         }
     }
 }

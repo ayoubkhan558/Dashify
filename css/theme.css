@@ -731,6 +731,7 @@ ul.subsubsub li:has(a.current) a {
 
 #drag-drop-area {
   border-radius: var(--admin-radius);
+  background-color: var(--admin-bg-main-light-2);
 }
 
 #wpcontent:has(#comment-status-radio) .postbox,
@@ -1025,6 +1026,9 @@ table.form-table {
 .plugin-card .plugin-card-bottom {
   background-color: var(--admin-bg-main-light-1);
 }
+.wp-filter {
+  margin-bottom: 20px !important;
+}
 .wp-filter + p {
   /* display: none; */
   opacity: 0;
@@ -1053,11 +1057,80 @@ table.form-table {
 }
 .upload-plugin .wp-upload-form {
   border-style: dashed;
+  border-width: 2px;
   border-radius: var(--admin-radius);
   background-color: #fff;
 }
 .upload-plugin .wp-upload-form input {
   border: 0;
+}
+.upload-plugin .wp-upload-form:hover, .upload-plugin .wp-upload-form:focus, .upload-plugin .wp-upload-form:active {
+  border-style: solid;
+}
+
+.filter-links {
+  padding: 5px 0px;
+}
+.filter-links li > a {
+  border: 1px solid var(--admin-border-color) !important;
+  border-radius: var(--admin-radius-sm);
+  margin: 5px 5px 5px 0;
+  padding: 5px 10px;
+  background-color: var(--admin-aside-bg-clr);
+}
+.filter-links li > a[aria-current=page] {
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
+  background-color: var(--admin-aside-bg-clr-light-2);
+}
+
+#file-upload-button,
+#pluginzip {
+  font-style: italic;
+}
+#file-upload-button::-webkit-file-upload-button, #pluginzip::-webkit-file-upload-button {
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--admin-radius-sm);
+  background-color: var(--admin-primary);
+}
+#file-upload-button::file-selector-button,
+#pluginzip::file-selector-button {
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--admin-radius-sm);
+  background-color: var(--admin-primary);
+}
+#file-upload-button::-webkit-file-upload-button:hover, #file-upload-button::-webkit-file-upload-button:focus, #file-upload-button::-webkit-file-upload-button:active, #pluginzip::-webkit-file-upload-button:hover, #pluginzip::-webkit-file-upload-button:focus, #pluginzip::-webkit-file-upload-button:active {
+  background-color: var(--admin-primary-dark-1);
+}
+#file-upload-button::file-selector-button:hover, #file-upload-button::file-selector-button:focus, #file-upload-button::file-selector-button:active,
+#pluginzip::file-selector-button:hover,
+#pluginzip::file-selector-button:focus,
+#pluginzip::file-selector-button:active {
+  background-color: var(--admin-primary-dark-1);
+}
+
+#drag-drop-area {
+  height: auto !important;
+  padding: 50px !important;
+}
+#drag-drop-area .drag-drop-inside {
+  margin: 0 !important;
+  width: 100% !important;
+}
+#drag-drop-area #plupload-browse-button {
+  font-style: italic;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--admin-radius-sm);
+  background-color: var(--admin-primary);
+}
+#drag-drop-area #plupload-browse-button:hover, #drag-drop-area #plupload-browse-button:focus, #drag-drop-area #plupload-browse-button:active {
+  background-color: var(--admin-primary-dark-1);
 }
 
 table {
