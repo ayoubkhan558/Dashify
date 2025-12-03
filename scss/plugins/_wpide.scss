@@ -1,0 +1,14 @@
+.sticky-menu #adminmenuwrap {
+  width: auto !important;
+
+  &.hover {}
+}
+
+.nk-fmg-body-head {
+  top: auto !important;
+}
+
+
+body:has(.nk-app-root.file-manager) {
+  
+}

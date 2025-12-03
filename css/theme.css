@@ -148,6 +148,7 @@ hr.wp-header-end {
 #adminmenuwrap {
   width: var(--admin-aside-width);
   background-color: var(--admin-aside-bg-clr);
+  overflow-y: unset !important;
 }
 
 .folded #adminmenuwrap {
@@ -228,7 +229,6 @@ hr.wp-header-end {
 #adminmenu li.menu-top .wp-submenu {
   overflow: hidden;
   border-radius: var(--admin-radius-md);
-  width: 100%;
   color: var(--admin-dark-clr);
   background-color: var(--admin-aside-bg-clr-light-1);
 }
@@ -247,6 +247,12 @@ hr.wp-header-end {
 #adminmenu .wp-submenu a:hover,
 #adminmenu .wp-submenu li.current a {
   color: var(--admin-primary-dark-1) !important;
+}
+#adminmenu .wp-submenu.wp-submenu-wrap {
+  width: 100%;
+}
+#adminmenu li.menu-top.opensub .wp-submenu {
+  width: auto;
 }
 #adminmenu li.wp-has-submenu.wp-not-current-submenu:focus-within:after {
   border-right-color: transparent;
@@ -714,6 +720,10 @@ ul.subsubsub li:has(a.current) a {
 .media-frame .attachments-wrapper .attachment .attachment-preview {
   border-radius: var(--admin-radius);
   overflow: hidden !important;
+}
+
+#drag-drop-area {
+  border-radius: var(--admin-radius);
 }
 
 #wpcontent:has(#comment-status-radio) .postbox,
@@ -1379,5 +1389,23 @@ table .plugins .second a {
 
 #tmpl-acf-field-group-pro-features {
   display: none !important;
+}
+
+.ac-boxes {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.2901960784);
+}
+
+.ac-admin__sidebar .sidebox {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+}
+
+.sticky-menu #adminmenuwrap {
+  width: auto !important;
+}
+.nk-fmg-body-head {
+  top: auto !important;
 }
 /*# sourceMappingURL=theme.css.map */

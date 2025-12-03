@@ -1,0 +1,12 @@
+.ac-boxes {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  border: 1px solid #8080804a;
+}
+
+.ac-admin__sidebar {
+  .sidebox {
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+  }
+}

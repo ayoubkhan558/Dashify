@@ -6,6 +6,7 @@
 #adminmenuwrap {
     width: var(--admin-aside-width);
     background-color: var(--admin-aside-bg-clr);
+    overflow-y: unset !important;
 }
 
 // folded 
@@ -133,9 +134,9 @@
 
         // sub menu styles
         .wp-submenu {
+            // width: 100%;
             overflow: hidden;
             border-radius: var(--admin-radius-md);
-            width: 100%;
             color: var(--admin-dark-clr);
             background-color: var(--admin-aside-bg-clr-light-1);
 
@@ -162,6 +163,7 @@
         }
     }
 
+    // sub menu - active menu
     .wp-submenu {
         left: var(--admin-aside-width);
 
@@ -173,6 +175,15 @@
         li.current a {
             color: var(--admin-primary-dark-1) !important;
         }
+
+        &.wp-submenu-wrap {
+            width: 100%;
+        }
+    }
+
+    // inner-hover sub menu 
+    li.menu-top.opensub .wp-submenu {
+        width: auto;
     }
 
 
