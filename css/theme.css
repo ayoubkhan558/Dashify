@@ -179,7 +179,7 @@ hr.wp-header-end {
 #adminmenu {
   width: auto;
   background-color: var(--admin-aside-bg-clr);
-  padding: var(--admin-padding);
+  padding: var(--admin-padding) !important;
   /* icon colors  */
 }
 #adminmenu a {
@@ -258,7 +258,14 @@ hr.wp-header-end {
   border-right-color: transparent;
 }
 #adminmenu li.wp-not-current-submenu.wp-has-submenu.opensub:hover:after {
-  border-right-color: var(--admin-aside-bg-clr);
+  border-right-color: var(--admin-aside-bg-clr-light-2);
+}
+
+#collapse-button {
+  color: var(--admin-dark-clr-light-2);
+}
+#collapse-button:hover, #collapse-button:focus, #collapse-button:active {
+  color: var(--admin-primary-dark-1);
 }
 
 /* navigation styles */
@@ -1403,7 +1410,7 @@ table .plugins .second a {
 }
 
 .sticky-menu #adminmenuwrap {
-  width: auto !important;
+  width: var(--admin-aside-width) !important;
 }
 .nk-fmg-body-head {
   top: auto !important;

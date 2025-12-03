@@ -46,7 +46,7 @@
 #adminmenu {
     width: auto;
     background-color: var(--admin-aside-bg-clr);
-    padding: var(--admin-padding);
+    padding: var(--admin-padding) !important;
 
     a {
         color: var(--admin-dark-clr) !important;
@@ -197,7 +197,18 @@
         }
 
         &.opensub:hover:after {
-            border-right-color: var(--admin-aside-bg-clr);
+            border-right-color: var(--admin-aside-bg-clr-light-2);
         }
+    }
+}
+
+
+#collapse-button {
+    color: var(--admin-dark-clr-light-2);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--admin-primary-dark-1);
     }
 }

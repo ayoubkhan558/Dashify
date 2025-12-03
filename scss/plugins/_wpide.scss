@@ -1,5 +1,6 @@
 .sticky-menu #adminmenuwrap {
-  width: auto !important;
+  // width: auto !important;
+  width: var(--admin-aside-width) !important;
 
   &.hover {}
 }
@@ -9,6 +10,4 @@
 }
 
 
-body:has(.nk-app-root.file-manager) {
-  
-}
+body:has(.nk-app-root.file-manager) {}
