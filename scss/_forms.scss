@@ -25,7 +25,7 @@ form {
     // Labels 
     label {
         font-weight: 600;
-        color: var(--admin-dark-clr-shade-1);
+        color: var(--admin-dark-clr-dark-1);
         margin-bottom: calc(var(--admin-padding-xs) / 2);
     }
 
@@ -34,12 +34,16 @@ form {
     textarea,
     select {
         padding: var(--admin-padding-sm) var(--admin-padding);
-        font-size: 1rem;
-        color: var(--admin-dark-clr-shade-2);
+        // font-size: 1rem;
+        color: var(--admin-dark-clr-dark-2);
         background: var(--admin-bg-main-light-2);
         border: 1px solid var(--admin-border-color-light-1);
         border-radius: var(--admin-radius-md) !important;
         transition: border-color .2s, box-shadow .2s, background .2s;
+
+        &:hover,
+        &:focus,
+        &:active {}
 
         &:focus {
             border-color: var(--admin-primary);
@@ -137,7 +141,7 @@ textarea,
 select {
     padding: var(--admin-padding-sm) var(--admin-padding);
     font-size: 1rem;
-    color: var(--admin-dark-clr-shade-2);
+    color: var(--admin-dark-clr-dark-2);
     background: var(--admin-bg-main-light-2);
     border: 1px solid var(--admin-border-color-light-1);
     border-radius: var(--admin-radius-md) !important;
@@ -155,4 +159,10 @@ select {
         opacity: .7;
         cursor: not-allowed;
     }
+}
+
+
+select {
+    background-repeat: no-repeat !important;
+    background-position: 95% center !important;
 }

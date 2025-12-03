@@ -20,19 +20,28 @@
   --admin-secondary-dark-3: hsl(from var(--admin-secondary) h s calc(l - 36));
   --admin-gradient-main: linear-gradient(180deg, rgba(48, 48, 48, 0) 63.53%, rgba(255, 255, 255, .15) 100%);
   --admin-warning: hsl(45, 98%, 46%);
+  --admin-warning-light-1: hsl(from var(--admin-warning-dark-1) h s calc(l + 12));
+  --admin-warning-dark-1: hsl(from var(--admin-warning-dark-1) h s calc(l - 12));
   --admin-warning-bg: #FFF1E3;
   --admin-success: hsl(135, 100%, 31%);
+  --admin-success-light-1: hsl(from var(--admin-success) h s calc(l + 12));
+  --admin-success-dark-1: hsl(from var(--admin-success) h s calc(l - 12));
   --admin-success-bg: #e5feea;
   --admin-danger: hsl(0, 78%, 62%);
+  --admin-danger-light-1: hsl(from var(--admin-danger) h s calc(l + 12));
+  --admin-danger-dark-1: hsl(from var(--admin-danger) h s calc(l - 12));
   --admin-danger-bg: hsl(0, 89%, 89%);
   --admin-info: hsl(205, 100%, 36%);
+  --admin-info-light-1: hsl(from var(--admin-info) h s calc(l + 12));
+  --admin-info-dark-1: hsl(from var(--admin-info) h s calc(l - 12));
   --admin-info-bg: hsl(204, 84%, 87%);
   /* Text colors */
   --admin-dark-clr: hsl(0, 2%, 9%);
-  --admin-dark-clr-tint-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
-  --admin-dark-clr-tint-2: hsl(from var(--admin-dark-clr) h s calc(l + 24));
-  --admin-dark-clr-shade-1: hsl(from var(--admin-dark-clr) h s calc(l - 12));
-  --admin-dark-clr-shade-2: hsl(from var(--admin-dark-clr) h s calc(l - 24));
+  --admin-dark-clr-light-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+  --admin-dark-clr-light-2: hsl(from var(--admin-dark-clr) h s calc(l + 24));
+  --admin-dark-clr-dark-1: hsl(from var(--admin-dark-clr) h s calc(l - 12));
+  --admin-dark-clr-dark-2: hsl(from var(--admin-dark-clr) h s calc(l - 24));
+  --admin-dark-clr-10: hsl(from var(--admin-dark-clr) h s l / 10%);
   /* Background colors */
   --admin-bg-main: hsl(0, 0%, 95%);
   --admin-bg-main-light-1: hsl(from var(--admin-bg-main) h s calc(l + 12));
@@ -48,17 +57,17 @@
   /* Aside */
   --admin-aside-width: 225px;
   --admin-aside-width-folded: 57px;
-  --admin-aside-bg-clr: #EBEBEB;
-  --admin-aside-bg-clr-light-1: #FAFAFA;
-  --admin-aside-bg-clr-light-2: #FAFAFA;
-  --admin-aside-bg-clr-dark-1: #FAFAFA;
-  --admin-aside-bg-clr-dark-2: #FAFAFA;
+  --admin-aside-bg-clr: hsl(0, 0%, 92%);
+  --admin-aside-bg-clr-light-1: hsl(from var(--admin-aside-bg-clr) h s calc(l + 12));
+  --admin-aside-bg-clr-light-2: hsl(from var(--admin-aside-bg-clr) h s calc(l + 24));
+  --admin-aside-bg-clr-dark-1: hsl(from var(--admin-aside-bg-clr) h s calc(l - 12));
+  --admin-aside-bg-clr-dark-2: hsl(from var(--admin-aside-bg-clr) h s calc(l - 24));
   /* UI styling */
-  --admin-radius-sm: 4px;
-  --admin-radius-md: 8px;
+  --admin-radius-sm: 6px;
+  --admin-radius-md: 10px;
   --admin-radius: 12px;
-  --admin-radius-lg: 16px;
-  --admin-radius-xl: 20px;
+  --admin-radius-lg: 14px;
+  --admin-radius-xl: 18px;
   /* Padding scale */
   --admin-padding-xs: 4px;
   --admin-padding-sm: 8px;
@@ -78,6 +87,7 @@
       0rem .0625rem .0625rem -.03125rem rgba(0, 0, 0, .03),
       0rem .03125rem .03125rem 0rem rgba(0, 0, 0, .04),
       0rem 0rem 0rem .0625rem rgba(0, 0, 0, .06);
+  --admin-btn-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
   /* ACF */
   --acf-border-color: #ccd0d4;
 }
@@ -220,7 +230,7 @@ hr.wp-header-end {
   border-radius: var(--admin-radius-md);
   width: 100%;
   color: var(--admin-dark-clr);
-  background-color: var(--admin-aside-bg-clr-dark-1);
+  background-color: var(--admin-aside-bg-clr-light-1);
 }
 #adminmenu li.menu-top .wp-submenu li.current a:hover, #adminmenu li.menu-top .wp-submenu li.current a:focus, #adminmenu li.menu-top .wp-submenu li.current a:active {
   color: var(--admin-primary) !important;
@@ -316,7 +326,6 @@ table {
   -webkit-box-shadow: var(--admin-box-shadow) !important;
           box-shadow: var(--admin-box-shadow) !important;
   border-radius: var(--admin-radius) !important;
-  overflow: hidden !important;
 }
 table thead th {
   font-size: 16px !important;
@@ -337,7 +346,6 @@ table {
   -webkit-box-shadow: var(--admin-box-shadow) !important;
           box-shadow: var(--admin-box-shadow) !important;
   border-radius: var(--admin-radius) !important;
-  overflow: hidden !important;
 }
 table thead th {
   font-size: 16px !important;
@@ -354,6 +362,9 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
   border-width: 0 !important;
   background-color: #fff;
 }
+.notice a {
+  color: inherit;
+}
 .notice.updated {
   color: var(--admin-success);
   background-color: var(--admin-success-bg);
@@ -363,8 +374,8 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
   background-color: var(--admin-success-bg);
 }
 .notice.notice-warning {
-  color: var(--admin-warning);
-  background-color: var(--admin-warning--bg);
+  color: var(--admin-warning-dark-1);
+  background-color: var(--admin-warning-bg);
 }
 .notice.notice-info {
   color: var(--admin-info);
@@ -385,12 +396,12 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
   overflow: hidden !important;
   font-weight: 600;
   background-color: var(--admin-bg-main);
-  border-radius: var(--admin-radius-md) !important;
+  border-radius: var(--admin-radius-sm) !important;
 }
 .wp-core-ui .button.button-primary {
-  background-color: var(--admin-dark-clr-shade-1);
-  background: var(--admin-dark-clr-shade-1) !important;
-  border-color: var(--admin-dark-clr-tint-1) !important;
+  background-color: var(--admin-dark-clr-dark-1);
+  background: var(--admin-dark-clr-dark-1) !important;
+  border-color: var(--admin-dark-clr-light-1) !important;
   color: #fff !important;
 }
 .wp-core-ui .button.button-primary:hover, .wp-core-ui .button.button-primary:focus, .wp-core-ui .button.button-primary:active {
@@ -416,13 +427,13 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
 }
 .wp-core-ui .button.button-link, .wp-core-ui .button.button-link-delete {
   background-color: transparent;
-  border-radius: var(--admin-radius-md);
+  border-radius: var(--admin-radius-sm);
 }
 .wp-core-ui .button.button-link:hover, .wp-core-ui .button.button-link:focus, .wp-core-ui .button.button-link:active, .wp-core-ui .button.button-link-delete:hover, .wp-core-ui .button.button-link-delete:focus, .wp-core-ui .button.button-link-delete:active {
   background-color: var(--admin-bg-main);
 }
 .wp-core-ui .button.button-large {
-  border-radius: var(--admin-radius-md);
+  border-radius: var(--admin-radius-sm);
 }
 .wp-core-ui .button.button-small {
   border-radius: var(--admin-radius-sm);
@@ -433,16 +444,28 @@ body.wpcac-horizontal-scroll .wpcac-horizontal-scroll-table {
 .wp-core-ui .button.activate {
   background-color: var(--admin-bg-main);
 }
+.wp-core-ui p .button {
+  vertical-align: bottom;
+}
 
-.nav-tab {
+.nav-tab-wrapper {
+  background-color: var(--admin-aside-bg-clr);
+  border-radius: var(--admin-radius-md);
+  padding: 7px;
+}
+.nav-tab-wrapper .nav-tab {
   background-color: var(--admin-bg-main);
   border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-aside-bg-clr-dark-1) !important;
+  border: 0 !important;
 }
-.nav-tab.nav-tab-active {
-  background-color: var(--admin-primary-light-1);
+.nav-tab-wrapper .nav-tab.nav-tab-active {
+  background-color: var(--admin-aside-bg-clr-light-2);
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
 }
-.nav-tab:hover, .nav-tab:focus, .nav-tab:active {
-  background-color: var(--admin-primary-light-1);
+.nav-tab-wrapper .nav-tab:hover, .nav-tab-wrapper .nav-tab:focus, .nav-tab-wrapper .nav-tab:active {
+  background-color: var(--admin-aside-bg-clr-light-2);
 }
 
 /* links styles */
@@ -458,7 +481,7 @@ a:hover, a:focus, a:active {
   font-weight: 600;
   color: var(--admin-primary) !important;
   border-color: var(--admin-primary) !important;
-  border-radius: var(--admin-radius-md) !important;
+  border-radius: var(--admin-radius-sm) !important;
   background-color: #fff;
 }
 .wrap .page-title-action:hover, .wrap .page-title-action:focus, .wrap .page-title-action:active {
@@ -483,15 +506,14 @@ form meter {
 
 form label {
   font-weight: 600;
-  color: var(--admin-dark-clr-shade-1);
+  color: var(--admin-dark-clr-dark-1);
   margin-bottom: calc(var(--admin-padding-xs) / 2);
 }
 form input,
 form textarea,
 form select {
   padding: var(--admin-padding-sm) var(--admin-padding);
-  font-size: 1rem;
-  color: var(--admin-dark-clr-shade-2);
+  color: var(--admin-dark-clr-dark-2);
   background: var(--admin-bg-main-light-2);
   border: 1px solid var(--admin-border-color-light-1);
   border-radius: var(--admin-radius-md) !important;
@@ -589,7 +611,7 @@ textarea,
 select {
   padding: var(--admin-padding-sm) var(--admin-padding);
   font-size: 1rem;
-  color: var(--admin-dark-clr-shade-2);
+  color: var(--admin-dark-clr-dark-2);
   background: var(--admin-bg-main-light-2);
   border: 1px solid var(--admin-border-color-light-1);
   border-radius: var(--admin-radius-md) !important;
@@ -615,7 +637,75 @@ select:disabled {
   cursor: not-allowed;
 }
 
+select {
+  background-repeat: no-repeat !important;
+  background-position: 95% center !important;
+}
+
 /* Pages/Screen styles */
+.ui-sortable.empty-container {
+  border-radius: var(--admin-radius);
+}
+
+ul.subsubsub {
+  background-color: var(--admin-aside-bg-clr);
+  border-radius: var(--admin-radius-md);
+  padding: 7px;
+}
+ul.subsubsub li:first-child a {
+  margin-left: 0;
+}
+ul.subsubsub li:last-child a {
+  margin-right: 0;
+}
+ul.subsubsub li a {
+  border-radius: var(--admin-radius-sm);
+  color: var(--admin-dark-clr);
+  padding: 5px 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+ul.subsubsub li:has(a.current) a {
+  background-color: #fff;
+  padding: 5px 10px;
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
+}
+
+#set-post-thumbnail {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
+  background-color: var(--admin-dark-clr);
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-dark-clr-dark-1) !important;
+  border: 0 !important;
+  width: -webkit-fill-available;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+#set-post-thumbnail:hover, #set-post-thumbnail:focus, #set-post-thumbnail:active {
+  background-color: var(--admin-dark-clr-dark-1);
+}
+
+.submitdelete {
+  text-decoration: none;
+  border-radius: var(--admin-radius-sm);
+}
+
 .media-frame .media-toolbar {
   border-radius: var(--admin-radius);
   -webkit-box-shadow: var(--admin-box-shadow);
@@ -705,37 +795,103 @@ table.wp-list-table tr.level-1 td.name a.row-title::before {
   overflow: hidden;
 }
 
+.components-accessible-toolbar.block-editor-block-contextual-toolbar {
+  border-radius: var(--admin-radius) !important;
+  overflow: hidden;
+}
+
 #nav-menus-frame #menu-management .menu-edit {
   border-radius: var(--admin-radius);
   overflow: hidden;
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  border: 0;
 }
 #nav-menus-frame #menu-management #nav-menu-footer,
 #nav-menus-frame #menu-management #nav-menu-header {
-  background-color: var(--admin-bg-main);
+  background-color: var(--admin-bg-main-light-1);
+}
+#nav-menus-frame #menu-management #nav-menu-header .menu-name-label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+#nav-menus-frame #menu-management #nav-menu-header #menu-name {
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  /* border: 0; */
 }
 #nav-menus-frame #side-sortables {
   border-radius: var(--admin-radius);
   overflow: hidden;
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  border: 0;
 }
-.nav-tab-wrapper .nav-tab.nav-tab-active {
-  margin-bottom: 7px;
+#nav-menus-frame #side-sortables button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-
-.posttype-tabs li.tabs {
-  margin-bottom: 10px;
+#nav-menus-frame #side-sortables .tabs-panel {
   border-radius: var(--admin-radius);
+}
+#nav-menus-frame #side-sortables .add-menu-item-tabs {
+  margin-bottom: 10px;
+  background-color: var(--admin-aside-bg-clr);
+  border-radius: var(--admin-radius-sm);
+  padding: 7px 4px;
+}
+#nav-menus-frame #side-sortables .add-menu-item-tabs li {
+  border: 1px solid var(--admin-border-color);
+  border-radius: var(--admin-radius-sm);
+  margin-bottom: 10px;
   border-bottom-color: var(--admin-border-color);
 }
-.posttype-tabs li.tabs .nav-tab-link {
+#nav-menus-frame #side-sortables .add-menu-item-tabs li .nav-tab-link {
+  color: var(--admin-dark-clr);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none !important;
 }
-
+#nav-menus-frame #side-sortables .add-menu-item-tabs li.tabs {
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
+}
 .manage-menus {
   border-radius: var(--admin-radius);
   overflow: hidden;
   border: 0;
 }
 
+.menu .menu-item {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  border: 0;
+  max-width: min(375px, 100%);
+  margin-bottom: 15px;
+}
+.menu .menu-item .menu-item-bar {
+  margin-top: 0;
+  border-radius: var(--admin-radius) var(--admin-radius) 0 0;
+  overflow: hidden;
+}
+.menu .menu-item .menu-item-bar .menu-item-handle {
+  border: 0;
+  max-width: none;
+}
+.menu .menu-item .menu-item-settings {
+  border-radius: 0 0 var(--admin-radius) var(--admin-radius);
+  overflow: hidden;
+  border: 0;
+  max-width: none;
+}
+.menu .menu-item .menu-item-settings .link-to-original {
+  border-radius: var(--admin-radius-sm);
+}
+.menu .menu-item .menu-item-settings input[type=text] {
+  margin-top: 5px;
+}
 .theme.active {
   border-radius: var(--admin-radius);
 }
@@ -815,6 +971,11 @@ table.wp-list-table tr.level-1 td.name a.row-title::before {
   border-radius: var(--admin-radius);
 }
 
+table.form-table {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .plugin-card,
 .plugin-install-php .wp-filter {
   border-radius: var(--admin-radius);
@@ -828,7 +989,7 @@ table.wp-list-table tr.level-1 td.name a.row-title::before {
   border-width: 2px;
 }
 .plugin-card:has(.compatibility-untested) {
-  border-color: var(--admin-warning);
+  border-color: var(--admin-warning-dark-1);
 }
 .plugin-card .desc.column-description p:first-child {
   display: none;
@@ -905,7 +1066,12 @@ table .plugins .second a {
   font-weight: 400;
 }
 
-p.popular-tags {
+.popular-tags {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  border: 0;
   border: none;
   line-height: 1;
   padding: 8px 12px 12px;
@@ -917,7 +1083,7 @@ p.popular-tags {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-p.popular-tags a {
+.popular-tags a {
   font-size: 12px !important;
   text-decoration: none;
   padding: 5px 15px;
@@ -925,8 +1091,16 @@ p.popular-tags a {
   color: #fff;
   background: var(--admin-primary);
 }
-p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
+.popular-tags a:hover, .popular-tags a:focus, .popular-tags a:active {
   background-color: var(--admin-primary-dark-1);
+}
+
+.notification-dialog {
+  border-radius: var(--admin-radius);
+  overflow: hidden;
+  -webkit-box-shadow: var(--admin-box-shadow);
+          box-shadow: var(--admin-box-shadow);
+  border: 0;
 }
 
 .health-check-accordion {
@@ -953,6 +1127,7 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
 
 .bricks-admin-wrapper {
   max-width: 100%;
+  margin: 0 !important;
 }
 
 .bricks-admin-inner {
@@ -977,8 +1152,8 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
   border-radius: var(--admin-radius-md);
 }
 .acf-admin-page .acf-btn {
-  background-color: var(--admin-dark-clr-shade-1);
-  border-color: var(--admin-dark-clr-tint-1);
+  background-color: var(--admin-dark-clr-dark-1);
+  border-color: var(--admin-dark-clr-light-1);
 }
 .acf-tab-wrap.-top {
   overflow: hidden;
@@ -988,13 +1163,28 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
   padding: var(--admin-padding);
 }
 .acf-fields .acf-tab-button {
-  border-radius: var(--admin-radius);
+  border-radius: var(--admin-radius-sm);
   border-bottom: 1px solid var(--acf-border-color) !important;
   margin-bottom: 5px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.acf-fields li.active .acf-tab-button {
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
 }
 .acf-fields .values .layout {
   border-radius: var(--admin-radius);
   overflow: hidden;
+}
+.acf-fields .acf-switch.-on {
+  border-color: var(--admin-primary);
+  background-color: var(--admin-primary);
+}
+.acf-fields .acf-switch .acf-switch-on {
+  text-shadow: var(--admin-primary) 0 1px 0;
 }
 
 .acf-postbox .acf-hndle-cog {
@@ -1141,11 +1331,40 @@ p.popular-tags a:hover, p.popular-tags a:focus, p.popular-tags a:active {
   border-radius: var(--admin-radius);
 }
 
-.mce-btn button,
-.wp-switch-editor {
+.mce-btn button {
   border-radius: var(--admin-radius) !important;
   overflow: hidden;
   margin-bottom: 4px !important;
+}
+
+.wp-editor-tabs {
+  background-color: var(--admin-aside-bg-clr);
+  border-radius: var(--admin-radius-md);
+  padding: 4px 7px;
+  margin-bottom: 4px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.wp-editor-tabs .wp-switch-editor {
+  border: 0;
+  line-height: 1;
+  font-size: 12px;
+  margin: 0 0 3px 0;
+  overflow: hidden;
+  padding: 3px 15px;
+  border-radius: var(--admin-radius-sm) !important;
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
+}
+.wp-editor-tabs .wp-switch-editor[aria-pressed=true], .wp-editor-tabs .wp-switch-editor:hover, .wp-editor-tabs .wp-switch-editor:focus, .wp-editor-tabs .wp-switch-editor:active {
+  background-color: #fff;
+  -webkit-box-shadow: var(--admin-btn-shadow);
+          box-shadow: var(--admin-btn-shadow);
 }
 
 .acf-editor-wrap .wp-editor-container {

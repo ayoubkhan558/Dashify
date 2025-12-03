@@ -1,7 +1,7 @@
 .acf-admin-page {
     .acf-btn {
-        background-color: var(--admin-dark-clr-shade-1);
-        border-color: var(--admin-dark-clr-tint-1);
+        background-color: var(--admin-dark-clr-dark-1);
+        border-color: var(--admin-dark-clr-light-1);
 
         .acf-btn-sm {}
     }
@@ -20,15 +20,36 @@
     }
 
     .acf-tab-button {
-        border-radius: var(--admin-radius);
+        border-radius: var(--admin-radius-sm);
         border-bottom: 1px solid var(--acf-border-color) !important;
         margin-bottom: 5px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+        // border-color: transparent !important;
+        box-shadow: none;
+    }
+
+    li.active {
+
+        .acf-tab-button {
+            box-shadow: var(--admin-btn-shadow);
+        }
     }
 
     .values {
         .layout {
             border-radius: var(--admin-radius);
             overflow: hidden;
+        }
+    }
+
+    .acf-switch {
+        &.-on {
+            border-color: var(--admin-primary);
+            background-color: var(--admin-primary);
+        }
+
+        .acf-switch-on {
+            text-shadow: var(--admin-primary) 0 1px 0;
         }
     }
 }
@@ -191,11 +212,39 @@
 
 
 // acf editor styles
-.mce-btn button,
-.wp-switch-editor {
+.mce-btn button {
     border-radius: var(--admin-radius) !important;
     overflow: hidden;
     margin-bottom: 4px !important;
+}
+
+.wp-editor-tabs {
+    background-color: var(--admin-aside-bg-clr);
+    border-radius: var(--admin-radius-md);
+    padding: 4px 7px;
+    margin-bottom: 4px !important;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .wp-switch-editor {
+        border: 0;
+        line-height: 1;
+        font-size: 12px;
+        margin: 0 0 3px 0;
+        overflow: hidden;
+        padding: 3px 15px;
+        border-radius: var(--admin-radius-sm) !important;
+        box-shadow: var(--admin-btn-shadow);
+
+        &[aria-pressed=true],
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #fff;
+            box-shadow: var(--admin-btn-shadow);
+        }
+    }
 }
 
 .acf-editor-wrap .wp-editor-container {

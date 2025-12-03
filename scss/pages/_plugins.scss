@@ -8,7 +8,7 @@
     border-width: 2px;
 
     &:has(.compatibility-untested) {
-        border-color: var(--admin-warning);
+        border-color: var(--admin-warning-dark-1);
     }
 
     .desc.column-description {
@@ -113,7 +113,8 @@ table {
 }
 
 
-p.popular-tags {
+.popular-tags {
+    @include card;
     border: none;
     line-height: 1;
     padding: 8px 12px 12px;
@@ -136,4 +137,9 @@ p.popular-tags {
             background-color: var(--admin-primary-dark-1);
         }
     }
+}
+
+
+.notification-dialog {
+    @include card;
 }

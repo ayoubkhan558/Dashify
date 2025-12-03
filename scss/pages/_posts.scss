@@ -1,0 +1,46 @@
+ul.subsubsub {
+  background-color: var(--admin-aside-bg-clr);
+  border-radius: var(--admin-radius-md);
+  padding: 7px;
+
+  li {
+    &:first-child {
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    &:last-child {
+
+      a {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      border-radius: var(--admin-radius-sm);
+      color: var(--admin-dark-clr);
+      padding: 5px 5px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    &:has(a.current) a {
+      background-color: #fff;
+      padding: 5px 10px;
+      box-shadow: var(--admin-btn-shadow);
+    }
+  }
+}
+
+#set-post-thumbnail {
+  @include btn;
+  width: -webkit-fill-available;
+  display: inline-flex;
+}
+
+.submitdelete {
+  text-decoration: none;
+  border-radius: var(--admin-radius-sm);
+}

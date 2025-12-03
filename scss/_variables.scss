@@ -30,20 +30,29 @@ $dev-max-width: 1440px;
 
 
     --admin-warning: hsl(45, 98%, 46%);
+    --admin-warning-light-1: hsl(from var(--admin-warning-dark-1) h s calc(l + 12));
+    --admin-warning-dark-1: hsl(from var(--admin-warning-dark-1) h s calc(l - 12));
     --admin-warning-bg: #FFF1E3;
     --admin-success: hsl(135, 100%, 31%);
+    --admin-success-light-1: hsl(from var(--admin-success) h s calc(l + 12));
+    --admin-success-dark-1: hsl(from var(--admin-success) h s calc(l - 12));
     --admin-success-bg: #e5feea;
     --admin-danger: hsl(0, 78%, 62%);
+    --admin-danger-light-1: hsl(from var(--admin-danger) h s calc(l + 12));
+    --admin-danger-dark-1: hsl(from var(--admin-danger) h s calc(l - 12));
     --admin-danger-bg: hsl(0, 89%, 89%);
     --admin-info: hsl(205, 100%, 36%);
+    --admin-info-light-1: hsl(from var(--admin-info) h s calc(l + 12));
+    --admin-info-dark-1: hsl(from var(--admin-info) h s calc(l - 12));
     --admin-info-bg: hsl(204, 84%, 87%);
 
     /* Text colors */
     --admin-dark-clr: hsl(0, 2%, 9%);
-    --admin-dark-clr-tint-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
-    --admin-dark-clr-tint-2: hsl(from var(--admin-dark-clr) h s calc(l + 24));
-    --admin-dark-clr-shade-1: hsl(from var(--admin-dark-clr) h s calc(l - 12));
-    --admin-dark-clr-shade-2: hsl(from var(--admin-dark-clr) h s calc(l - 24));
+    --admin-dark-clr-light-1: hsl(from var(--admin-dark-clr) h s calc(l + 12));
+    --admin-dark-clr-light-2: hsl(from var(--admin-dark-clr) h s calc(l + 24));
+    --admin-dark-clr-dark-1: hsl(from var(--admin-dark-clr) h s calc(l - 12));
+    --admin-dark-clr-dark-2: hsl(from var(--admin-dark-clr) h s calc(l - 24));
+    --admin-dark-clr-10: hsl(from var(--admin-dark-clr) h s l / 10%);
 
     /* Background colors */
     --admin-bg-main: hsl(0, 0%, 95%);
@@ -62,18 +71,18 @@ $dev-max-width: 1440px;
     /* Aside */
     --admin-aside-width: 225px;
     --admin-aside-width-folded: 57px;
-    --admin-aside-bg-clr: #EBEBEB;
-    --admin-aside-bg-clr-light-1: #FAFAFA;
-    --admin-aside-bg-clr-light-2: #FAFAFA;
-    --admin-aside-bg-clr-dark-1: #FAFAFA;
-    --admin-aside-bg-clr-dark-2: #FAFAFA;
+    --admin-aside-bg-clr: hsl(0, 0%, 92%);
+    --admin-aside-bg-clr-light-1: hsl(from var(--admin-aside-bg-clr) h s calc(l + 12));
+    --admin-aside-bg-clr-light-2: hsl(from var(--admin-aside-bg-clr) h s calc(l + 24));
+    --admin-aside-bg-clr-dark-1: hsl(from var(--admin-aside-bg-clr) h s calc(l - 12));
+    --admin-aside-bg-clr-dark-2: hsl(from var(--admin-aside-bg-clr) h s calc(l - 24));
 
     /* UI styling */
-    --admin-radius-sm: 4px;
-    --admin-radius-md: 8px;
+    --admin-radius-sm: 6px;
+    --admin-radius-md: 10px;
     --admin-radius: 12px;
-    --admin-radius-lg: 16px;
-    --admin-radius-xl: 20px;
+    --admin-radius-lg: 14px;
+    --admin-radius-xl: 18px;
 
     /* Padding scale */
     --admin-padding-xs: 4px;
@@ -95,6 +104,7 @@ $dev-max-width: 1440px;
         0rem .0625rem .0625rem -.03125rem rgba(0, 0, 0, .03),
         0rem .03125rem .03125rem 0rem rgba(0, 0, 0, .04),
         0rem 0rem 0rem .0625rem rgba(0, 0, 0, .06);
+    --admin-btn-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
 
     /* ACF */
     --acf-border-color: #ccd0d4;

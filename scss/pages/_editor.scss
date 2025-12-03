@@ -54,3 +54,10 @@
       border-radius: var(--admin-radius);
       overflow: hidden;
     }
+
+
+
+    .components-accessible-toolbar.block-editor-block-contextual-toolbar {
+      border-radius: var(--admin-radius) !important;
+      overflow: hidden;
+    }

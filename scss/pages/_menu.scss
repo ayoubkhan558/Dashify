@@ -1,59 +1,110 @@
 #nav-menus-frame {
     #menu-management {
         .menu-edit {
-            border-radius: var(--admin-radius);
-            overflow: hidden;
+            @include card;
         }
 
         #nav-menu-footer,
         #nav-menu-header {
-            background-color: var(--admin-bg-main);
+            background-color: var(--admin-bg-main-light-1);
+        }
+
+        #nav-menu-header {
+            .menu-name-label {
+                font-size: 16px;
+                margin-right: 10px;
+            }
+
+            #menu-name {
+                box-shadow: var(--admin-box-shadow);
+                /* border: 0; */
+            }
         }
     }
 
     #side-sortables {
-        border-radius: var(--admin-radius);
-        overflow: hidden;
+        @include card;
+
+        button {
+            box-shadow: none;
+        }
+
+        .tabs-panel {
+            border-radius: var(--admin-radius);
+        }
+
+        // .posttype-tabs
+        .add-menu-item-tabs {
+            margin-bottom: 10px;
+            background-color: var(--admin-aside-bg-clr);
+            border-radius: var(--admin-radius-sm);
+            padding: 7px 4px;
+
+            li {
+                border: 1px solid var(--admin-border-color);
+                border-radius: var(--admin-radius-sm);
+                margin-bottom: 10px;
+                border-bottom-color: var(--admin-border-color);
+
+                // a 
+                .nav-tab-link {
+                    color: var(--admin-dark-clr);
+                    box-shadow: none;
+                    outline: none !important;
+                }
+
+                &.tabs {
+                    box-shadow: var(--admin-btn-shadow);
+                }
+            }
+        }
     }
 
     .control-section.accordion-section {}
 }
 
 
-// menu nav tabs    
-.nav-tab-wrapper {
-    .nav-tab {
-        &.nav-tab-active {
-            margin-bottom: 7px;
-        }
-    }
-}
-
-.posttype-tabs {
-    li.tabs {
-        margin-bottom: 10px;
-        border-radius: var(--admin-radius);
-        border-bottom-color: var(--admin-border-color);
-
-        .nav-tab-link {
-            outline: none !important;
-        }
-    }
-}
+// menu nav tabs   
 
 // Create your first menu below.
 .manage-menus {
     @include card-alt;
 }
 
+// #menu-to-edit
 .menu {
     .menu-item {
+        @include card;
+        max-width: min(375px, 100%);
+        margin-bottom: 15px;
 
         // menu item header
-        .menu-item-bar {}
+        .menu-item-bar {
+            margin-top: 0;
+            border-radius: var(--admin-radius) var(--admin-radius) 0 0;
+            overflow: hidden;
+
+            .menu-item-handle {
+                border: 0;
+                max-width: none;
+            }
+        }
 
         // menu item footer
-        .menu-item-settings {}
+        .menu-item-settings {
+            border-radius: 0 0 var(--admin-radius) var(--admin-radius);
+            overflow: hidden;
+            border: 0;
+            max-width: none;
+
+            .link-to-original {
+                border-radius: var(--admin-radius-sm);
+            }
+
+            input[type=text] {
+                margin-top: 5px;
+            }
+        }
 
 
 

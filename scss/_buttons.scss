@@ -3,12 +3,12 @@
         overflow: hidden !important;
         font-weight: 600;
         background-color: var(--admin-bg-main);
-        border-radius: var(--admin-radius-md) !important;
+        border-radius: var(--admin-radius-sm) !important;
 
         &.button-primary {
-            background-color: var(--admin-dark-clr-shade-1);
-            background: var(--admin-dark-clr-shade-1) !important;
-            border-color: var(--admin-dark-clr-tint-1) !important;
+            background-color: var(--admin-dark-clr-dark-1);
+            background: var(--admin-dark-clr-dark-1) !important;
+            border-color: var(--admin-dark-clr-light-1) !important;
             color: #fff !important;
 
             &:hover,
@@ -49,7 +49,7 @@
         &.button-link,
         &.button-link-delete {
             background-color: transparent;
-            border-radius: var(--admin-radius-md);
+            border-radius: var(--admin-radius-sm);
 
             &:hover,
             &:focus,
@@ -60,7 +60,7 @@
 
         // sizes
         &.button-large {
-            border-radius: var(--admin-radius-md);
+            border-radius: var(--admin-radius-sm);
         }
 
         &.button-small {
@@ -81,20 +81,35 @@
         }
     }
 
+    p .button {
+        vertical-align: bottom;
+    }
 }
 
 
-.nav-tab {
-    background-color: var(--admin-bg-main);
-    border-radius: var(--admin-radius-sm);
 
-    &.nav-tab-active {
-        background-color: var(--admin-primary-light-1);
-    }
 
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: var(--admin-primary-light-1);
+// nav - tabs
+.nav-tab-wrapper {
+    background-color: var(--admin-aside-bg-clr);
+    border-radius: var(--admin-radius-md);
+    padding: 7px;
+
+    .nav-tab {
+        background-color: var(--admin-bg-main);
+        border-radius: var(--admin-radius-sm);
+        border: 1px solid var(--admin-aside-bg-clr-dark-1) !important;
+        border: 0 !important;
+
+        &.nav-tab-active {
+            background-color: var(--admin-aside-bg-clr-light-2);
+            box-shadow: var(--admin-btn-shadow);
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--admin-aside-bg-clr-light-2);
+        }
     }
 }

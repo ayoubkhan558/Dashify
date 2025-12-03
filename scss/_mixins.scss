@@ -66,4 +66,23 @@ $y: -1 * $dev-min-width * $slope + $min-size;
   // border: 0;
 }
 
-// @include card;
+@mixin btn($padding: 0.5rem 1rem) {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: $padding;
+  color: #fff;
+  box-shadow: var(--admin-btn-shadow);
+  background-color: var(--admin-dark-clr);
+  border-radius: var(--admin-radius-sm);
+  border: 1px solid var(--admin-dark-clr-dark-1) !important;
+  border: 0 !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--admin-dark-clr-dark-1);
+  }
+}

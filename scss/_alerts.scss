@@ -3,6 +3,10 @@
     border-width: 0 !important;
     background-color: #fff;
 
+    a {
+        color: inherit;
+    }
+
     &.is-dismissible {}
 
     &.update-message {}
@@ -24,8 +28,8 @@
     }
 
     &.notice-warning {
-        color: var(--admin-warning);
-        background-color: var(--admin-warning--bg);
+        color: var(--admin-warning-dark-1);
+        background-color: var(--admin-warning-bg);
     }
 
     &.notice-info {
