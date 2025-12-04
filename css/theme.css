@@ -99,11 +99,6 @@ body.wp-admin {
 }
 
 /* LAYOUT styles */
-#wpwrap {
-  margin-top: calc(var(--top-offset) * 2);
-  overflow: hidden;
-}
-
 /* Main/Content styles */
 #wpcontent,
 #wpfooter {
@@ -271,7 +266,10 @@ hr.wp-header-end {
 /* navigation styles */
 #wpadminbar {
   background-color: var(--top-bg);
-  padding: var(--top-offset) 0;
+}
+
+#wpwrap {
+  overflow: hidden;
 }
 
 #wp-admin-bar-wp-logo {

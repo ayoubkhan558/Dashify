@@ -1,7 +1,14 @@
 #wpadminbar {
     // border-radius: 0 0 var(--admin-radius) var(--admin-radius);
     background-color: var(--top-bg);
-    padding: var(--top-offset) 0;
+    // padding: var(--top-offset) 0;
+}
+
+#wpwrap {
+    // margin-top: calc(var(--top-offset) * 2);
+
+    // temporary fix for overflow 
+    overflow: hidden;
 }
 
 #wp-admin-bar-wp-logo {
