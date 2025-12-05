@@ -175,7 +175,6 @@ hr.wp-header-end {
   width: auto;
   background-color: var(--admin-aside-bg-clr);
   padding: var(--admin-padding) !important;
-  /* icon colors  */
 }
 #adminmenu a {
   color: var(--admin-dark-clr) !important;
@@ -189,18 +188,23 @@ hr.wp-header-end {
   content: none;
   display: none;
 }
-#adminmenu div.wp-menu-image {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
 #adminmenu li.wp-menu-separator {
   height: 0;
   margin: 0;
 }
+#adminmenu li.menu-top {
+  margin-bottom: 2px !important;
+  border-radius: var(--admin-radius-md);
+}
 #adminmenu li.menu-top:hover {
-  background-color: transparent;
+  background-color: var(--admin-aside-bg-clr-light-2);
+}
+#adminmenu li.menu-top:hover .dashicons-before:before {
+  color: var(--admin-primary-dark-1) !important;
 }
 #adminmenu li.menu-top a.menu-top {
+  overflow: hidden;
+  border-radius: var(--admin-radius-md);
   background-color: transparent;
 }
 #adminmenu li.menu-top a.menu-top:hover, #adminmenu li.menu-top a.menu-top:focus, #adminmenu li.menu-top a.menu-top:active {
@@ -210,16 +214,17 @@ hr.wp-header-end {
 #adminmenu li.menu-top a.menu-top a.wp-has-current-submenu {
   color: var(--admin-dark-clr);
 }
+#adminmenu li.menu-top a.menu-top .dashicons:before,
+#adminmenu li.menu-top a.menu-top .dashicons-before:before {
+  font-size: 18px;
+  color: rgba(7, 19, 31, 0.6);
+}
 #adminmenu li.menu-top.opensub a.menu-top {
   color: var(--admin-dark-clr);
   background-color: var(--admin-aside-bg-clr-light-2);
 }
 #adminmenu li.menu-top.wp-has-current-submenu a.wp-has-current-submenu {
   color: var(--admin-dark-clr);
-}
-#adminmenu li.menu-top.wp-has-current-submenu div.wp-menu-image {
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
 #adminmenu li.menu-top .wp-submenu {
   overflow: hidden;
@@ -232,6 +237,10 @@ hr.wp-header-end {
 }
 #adminmenu li.menu-top .wp-submenu li a:hover, #adminmenu li.menu-top .wp-submenu li a:focus, #adminmenu li.menu-top .wp-submenu li a:active {
   color: var(--admin-primary) !important;
+}
+#adminmenu li.wp-menu-open {
+  border-radius: var(--admin-radius-md);
+  background-color: var(--admin-aside-bg-clr-light-2);
 }
 #adminmenu .wp-submenu {
   left: var(--admin-aside-width);

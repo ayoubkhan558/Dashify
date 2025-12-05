@@ -68,98 +68,117 @@
         }
     }
 
-    /* icon colors  */
-    div.wp-menu-image {
-        filter: invert(1);
+    // menu list item
+    li {
 
-        &:before {
-            // color: var(--admin-dark-clr);
-        }
-    }
-
-    li.wp-menu-separator {
-        height: 0;
-        margin: 0;
-    }
-
-    li.menu-top {
-
-        &:hover {
-            background-color: transparent;
+        // menu list item separator
+        &.wp-menu-separator {
+            height: 0;
+            margin: 0;
         }
 
-        a.menu-top {
-            background-color: transparent;
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--admin-dark-clr);
-                background-color: var(--admin-aside-bg-clr-light-2);
-            }
-
-            a.wp-has-current-submenu {
-                color: var(--admin-dark-clr);
-            }
-        }
-
-        // sub menu opened 
-        &.opensub {
-            a.menu-top {
-                color: var(--admin-dark-clr);
-                background-color: var(--admin-aside-bg-clr-light-2);
-
-                .wp-menu-image:before {
-                    // color: var(--admin-dark-clr);
-                }
-            }
-        }
-
-        // current menu item
-        &.wp-has-current-submenu {
-            a.wp-has-current-submenu {
-                color: var(--admin-dark-clr);
-            }
-
-            // icon 
-            div.wp-menu-image {
-                filter: invert(1);
-
-                &:before {
-                    // color: var(--admin-primary);
-                }
-            }
-        }
-
-
-        // sub menu styles
-        .wp-submenu {
-            // width: 100%;
-            overflow: hidden;
+        // menu list item top
+        &.menu-top {
+            margin-bottom: 2px !important;
             border-radius: var(--admin-radius-md);
-            color: var(--admin-dark-clr);
-            background-color: var(--admin-aside-bg-clr-light-1);
 
+            &:hover {
+                background-color: var(--admin-aside-bg-clr-light-2);
 
-            li {
-                &.current a {
+                .dashicons-before {
 
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        color: var(--admin-primary) !important;
-                    }
-                }
-
-                a {
-
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        color: var(--admin-primary) !important;
+                    &:before {
+                        color: var(--admin-primary-dark-1) !important;
                     }
                 }
             }
+
+            // menu list link
+            a.menu-top {
+                overflow: hidden;
+                border-radius: var(--admin-radius-md);
+                background-color: transparent;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: var(--admin-dark-clr);
+                    background-color: var(--admin-aside-bg-clr-light-2);
+                }
+
+                a.wp-has-current-submenu {
+                    color: var(--admin-dark-clr);
+                }
+
+                // icon  
+                .dashicons,
+                .dashicons-before {
+
+                    &:before {
+                        font-size: 18px;
+                        color: rgb(7 19 31 / 60%);
+                        // color: var(--admin-primary);
+
+                        // filter: invert(1);
+                    }
+                }
+            }
+
+            // sub menu opened 
+            &.opensub {
+                a.menu-top {
+                    color: var(--admin-dark-clr);
+                    background-color: var(--admin-aside-bg-clr-light-2);
+
+                    .wp-menu-image:before {
+                        // color: var(--admin-dark-clr);
+                    }
+                }
+            }
+
+            // current menu item
+            &.wp-has-current-submenu {
+                a.wp-has-current-submenu {
+                    color: var(--admin-dark-clr);
+                }
+            }
+
+
+            // sub menu styles
+            .wp-submenu {
+                // width: 100%;
+                overflow: hidden;
+                border-radius: var(--admin-radius-md);
+                color: var(--admin-dark-clr);
+                background-color: var(--admin-aside-bg-clr-light-1);
+
+
+                li {
+                    &.current a {
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: var(--admin-primary) !important;
+                        }
+                    }
+
+                    a {
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: var(--admin-primary) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // menu list item top OPENED
+        &.wp-menu-open {
+            border-radius: var(--admin-radius-md);
+            background-color: var(--admin-aside-bg-clr-light-2);
         }
     }
 
