@@ -180,7 +180,12 @@ table {
         border-width: 0 !important;
     }
 
-    .plugins {
+    &.plugins {
+        .active {
+             th.check-column {
+                border-left: 0 !important;
+             }
+        }
         .second {
             font-style: italic;
             font-weight: 400;
@@ -188,6 +193,8 @@ table {
             a {
                 font-style: italic;
                 font-weight: 400;
+                // color: var(--admin-dark-clr);
+                // text-decoration: none;
             }
         }
     }

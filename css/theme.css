@@ -1165,11 +1165,14 @@ table .plugin-update-tr.active td,
 table .plugins .active th.check-column {
   border-width: 0 !important;
 }
-table .plugins .second {
+table.plugins .active th.check-column {
+  border-left: 0 !important;
+}
+table.plugins .second {
   font-style: italic;
   font-weight: 400;
 }
-table .plugins .second a {
+table.plugins .second a {
   font-style: italic;
   font-weight: 400;
 }
