@@ -91,6 +91,10 @@
                         color: var(--admin-primary-dark-1) !important;
                     }
                 }
+
+                .wp-menu-image.svg {
+                    filter: invert(1);
+                }
             }
 
             // menu list link
@@ -121,6 +125,10 @@
 
                         // filter: invert(1);
                     }
+                }
+
+                .wp-menu-image.svg {
+                    filter: invert(1);
                 }
             }
 
