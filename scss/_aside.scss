@@ -187,6 +187,10 @@
         &.wp-menu-open {
             border-radius: var(--admin-radius-md);
             background-color: var(--admin-aside-bg-clr-light-2);
+
+            ul.wp-submenu.wp-submenu-wrap li a::before {
+                content: "─ ";
+            }
         }
     }
 

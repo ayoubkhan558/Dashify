@@ -250,6 +250,9 @@ hr.wp-header-end {
   border-radius: var(--admin-radius-md);
   background-color: var(--admin-aside-bg-clr-light-2);
 }
+#adminmenu li.wp-menu-open ul.wp-submenu.wp-submenu-wrap li a::before {
+  content: "─ ";
+}
 #adminmenu .wp-submenu {
   left: var(--admin-aside-width);
 }
