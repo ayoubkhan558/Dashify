@@ -543,6 +543,7 @@ form label {
 form input,
 form textarea,
 form select {
+  font-size: 1rem;
   padding: var(--admin-padding-sm) var(--admin-padding);
   color: var(--admin-dark-clr-dark-2);
   background: var(--admin-bg-main-light-2);
@@ -618,7 +619,6 @@ form .btn-submit {
   color: var(--admin-bg-main-light-2);
   border: none;
   border-radius: var(--admin-radius-md);
-  font-size: 1rem;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
