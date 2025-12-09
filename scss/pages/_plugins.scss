@@ -71,23 +71,6 @@
 
 .upload-plugin {
     padding: 0;
-
-    .wp-upload-form {
-        border-style: dashed;
-        border-width: 2px;
-        border-radius: var(--admin-radius);
-        background-color: #fff;
-
-        input {
-            border: 0;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-            border-style: solid;
-        }
-    }
 }
 
 .filter-links {
@@ -182,10 +165,11 @@ table {
 
     &.plugins {
         .active {
-             th.check-column {
+            th.check-column {
                 border-left: 0 !important;
-             }
+            }
         }
+
         .second {
             font-style: italic;
             font-weight: 400;

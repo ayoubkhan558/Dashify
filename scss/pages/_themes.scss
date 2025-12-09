@@ -55,6 +55,10 @@
             &.active {
                 border-color: var(--admin-primary);
             }
+
+            .theme-name {
+                height: auto !important;
+            }
         }
     }
 

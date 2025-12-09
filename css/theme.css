@@ -673,6 +673,19 @@ select {
   background-position: 95% center !important;
 }
 
+.wp-upload-form {
+  border-style: dashed !important;
+  border-width: 2px !important;
+  background-color: #fff !important;
+  border-radius: var(--admin-radius);
+}
+.wp-upload-form input {
+  border: 0;
+}
+.wp-upload-form:hover, .wp-upload-form:focus, .wp-upload-form:active {
+  border-style: solid;
+}
+
 /* Pages/Screen styles */
 .ui-sortable.empty-container {
   border-radius: var(--admin-radius);
@@ -966,6 +979,9 @@ table.wp-list-table tr.level-1 td.name a.row-title::before {
 .theme-browser .themes .theme.active {
   border-color: var(--admin-primary);
 }
+.theme-browser .themes .theme .theme-name {
+  height: auto !important;
+}
 .theme-browser .parent-theme {
   border-radius: var(--admin-radius);
 }
@@ -1069,18 +1085,6 @@ table.form-table {
 
 .upload-plugin {
   padding: 0;
-}
-.upload-plugin .wp-upload-form {
-  border-style: dashed;
-  border-width: 2px;
-  border-radius: var(--admin-radius);
-  background-color: #fff;
-}
-.upload-plugin .wp-upload-form input {
-  border: 0;
-}
-.upload-plugin .wp-upload-form:hover, .upload-plugin .wp-upload-form:focus, .upload-plugin .wp-upload-form:active {
-  border-style: solid;
 }
 
 .filter-links {

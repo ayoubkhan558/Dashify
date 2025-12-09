@@ -166,3 +166,21 @@ select {
     background-repeat: no-repeat !important;
     background-position: 95% center !important;
 }
+
+// plugin/themes upload 
+.wp-upload-form {
+    border-style: dashed !important;
+    border-width: 2px !important;
+    background-color: #fff !important;
+    border-radius: var(--admin-radius);
+
+    input {
+        border: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-style: solid;
+    }
+}
