@@ -13,7 +13,7 @@
 
 .theme-overlay {
     .theme-backdrop {
-        left: var(--admin-aside-width-folded);
+        // left: var(--admin-aside-width-folded);
     }
 
     .theme-screenshots {
@@ -21,7 +21,7 @@
     }
 
     .theme-wrap {
-        left: calc(var(--admin-aside-width) + 24px);
+        left: calc(var(--admin-aside-width) + 24px) !important;
         overflow: hidden;
         border-radius: var(--admin-radius);
         bottom: fluid-value(25px, 150px);

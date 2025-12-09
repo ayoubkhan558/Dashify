@@ -935,14 +935,11 @@ table.wp-list-table tr.level-1 td.name a.row-title::before {
   background-color: var(--admin-aside-bg-clr);
 }
 
-.theme-overlay .theme-backdrop {
-  left: var(--admin-aside-width-folded);
-}
 .theme-overlay .theme-screenshots {
   width: 30%;
 }
 .theme-overlay .theme-wrap {
-  left: calc(var(--admin-aside-width) + 24px);
+  left: calc(var(--admin-aside-width) + 24px) !important;
   overflow: hidden;
   border-radius: var(--admin-radius);
   bottom: clamp(25px, -28.2178217822px + 0.1237623762 * 100vw, 150px);
