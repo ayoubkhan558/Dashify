@@ -1,6 +1,7 @@
 .sticky-menu #adminmenuwrap {
   // width: auto !important;
-  width: var(--admin-aside-width) !important;
+  // width: var(--admin-aside-width) !important;
+  left: calc(var(--admin-aside-width) + 24px) !important;
 
   &.hover {}
 }
