@@ -7,7 +7,7 @@ function dashify_admin_enqueue_styles( $hook ) {
         $version = (string) filemtime( $css_path );
         wp_enqueue_style( 'dashify-admin-theme', $css_url, array(), $version );
     } else {
-        wp_register_style( 'dashify-admin-theme', false );
+        wp_register_style( 'dashify-admin-theme', false, array(), '1.0.0' );
         wp_enqueue_style( 'dashify-admin-theme' );
     }
     $primary = get_option( 'dashify_admin_primary', '' );

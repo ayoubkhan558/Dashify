@@ -5,7 +5,9 @@ Plugin URI: https://github.com/ayoubkhan558/dashify
 Description: Enqueues the compiled `css/theme.css` into the WordPress admin area when the plugin is active.
 Version: 1.0.0
 Author: Ayoub Khan
-Text Domain: dashify-admin
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dashify
 */
 
 
@@ -32,7 +34,7 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'dashify_admin
 function dashify_admin_settings_link( $links ) {
     if ( ! current_user_can( 'manage_options' ) ) return $links;
     $url = esc_url( admin_url( 'options-general.php?page=dashify-admin' ) );
-    $settings_link = '<a href="' . $url . '">' . esc_html__( 'Settings', 'dashify-admin' ) . '</a>';
+    $settings_link = '<a href="' . $url . '">' . esc_html__( 'Settings', 'dashify' ) . '</a>';
     array_unshift( $links, $settings_link );
     return $links;
 }

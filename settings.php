@@ -32,7 +32,7 @@ function dashify_admin_register_settings() {
     ] );
     add_settings_section(
         'dashify_admin_section',
-        __( 'Customization Options', 'dashify-admin' ),
+        __( 'Customization Options', 'dashify' ),
         '__return_false',
         'dashify-admin-settings'
     );
